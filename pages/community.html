@@ -1,9 +1,7 @@
 <!--
 
-+ Layout cu GRID + FLEX
-+ Teanziție care să schimbe proprietăți la diferite intervale de timp (Aș vrea să fie o galerie)
-+ Animație care să modifice proprietăți ale elementului
-+ Conținut cu :after și :before, cu sens!
++ Tranziție care să schimbe proprietăți la diferite intervale de timp (Aș vrea să fiu o galerie)(mi as dori sa nu mai fiti domnule tryhard, te rog )
++ Soundtrack
 
 -->
 
@@ -24,9 +22,11 @@
 		<link rel="stylesheet" href="../css/community.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
+		<script src="../js/script.js"></script>
+		<script src="../js/grid.js"></script>
 	</head>
 	
-	<body>
+	<body id="clickable">
 
 		<header>
 			<a href="../index.html"><img src="../assets/images/large_logo.png" alt="Stardew Valley logo"></a>
@@ -68,18 +68,55 @@
 
 		<main>
 
-			<div class="grid-container">
-				<div class="grid-item">
-						<img src="../assets/images/alex.png" alt="Alex">
+			<!-- Clock -->
+
+			<div class="clock">
+				<div class="clockday">
+					<span id="cd"></span>
 				</div>
 
-				<div class="grid-item">
-					<span> Birthday: Summer 13</span>
-					<span> Lives in: Pelican Town</span>
-					<span> Adress: 1 River Road</span>
-					<span class="marriageTrue"></span>
-					<span> Most loved gift: <img src="../assets/images/alexgift.png" alt="Most loved gift"> Complete Breakfast</span>	
+				<div class="clocktime">
+					<span id="ct"></span>
 				</div>
+
+				<div class="counter">
+					<span id="count">0</span>
+				</div>
+
+				<img src="../assets/images/clock.png" alt="Stardew Valley Clock">
+			</div>
+
+			<div class="galerie">
+
+				<div class="grid-container">
+					
+					<div class="grid-item">
+						<img src="../assets/images/alex.png" alt="Alex">
+					</div>
+
+					<div class="grid-item">
+						<span> Birthday: Summer 13</span>
+						<span> Lives in: Pelican Town</span>
+						<span> Adress: 1 River Road</span>
+						<span class="marriageTrue"></span>
+						<span> Most loved gift: <img src="../assets/images/alexgift.png" alt="Most loved gift"> Complete Breakfast</span>	
+					</div>
+					
+					<div class="grid-item">
+						<img src="../assets/images/alex.png" alt="Alex">
+					</div>
+
+					<div class="grid-item">
+						<span> Birthday: Summer 13</span>
+						<span> Lives in: Pelican Town</span>
+						<span> Adress: 1 River Road</span>
+						<span class="marriageTrue"></span>
+						<span> Most loved gift: <img src="../assets/images/alexgift.png" alt="Most loved gift"> Complete Breakfast</span>	
+					</div>
+
+
+				</div>
+				
 			</div>
 
 		</main>
@@ -90,6 +127,4 @@
 		
 	</body>
 
-	<!-- Script area -->
-	<script src="js/script.js"></script>
 </html>

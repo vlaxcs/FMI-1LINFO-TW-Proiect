@@ -1,3 +1,4 @@
+window.onload = function() {
 function updateTime() {
     const now = new Date();
 
@@ -31,7 +32,18 @@ function dropMoney() {
 
     const money = document.createElement("img");
     money.classList.add("money");
-    money.src = "assets/images/gold.png";
+
+    let location = new String();
+    location = window.location.href;
+    if (location.includes("build.html") || location.includes("community.html"))
+    {
+       money.src = "../assets/images/gold.png";
+    }
+    else
+    {
+        money.src = "assets/images/gold.png";
+    }
+   
 
     const randomX = Math.random() * window.innerWidth;
     money.style.left = `${randomX}px`;
@@ -48,3 +60,4 @@ button.addEventListener("click", function(){
     count++;
     counter.innerHTML = count;
 });
+};

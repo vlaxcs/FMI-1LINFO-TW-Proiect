@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+	
+		<title>Build your character - Stardew Valley</title>
+		
+		<meta charset="utf-8">
+		<meta name="author" content="Vlad Minciunescu">
+		<meta name="description" content="The fairy tale of Stardew Valley">
+		<meta name="keywords" content="stardew valley, indie game, pixel art, steam indie game, concernedape, shane, maru, abigail, e-boy games, e-girl games, pixel_art, twitch games, stardew valley history">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="icon" href="../assets/images/logo.png" type="image/png">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/build.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	</head>
+	
+	<body id="clickable">
+
+		<header>
+			<a href="../index.html"><img src="../assets/images/large_logo.png" alt="Stardew Valley logo"></a>
+		</header>
+	
+		<!-- Expandable menu -->
+
+		<!-- Toggle Checkbox -->
+		<input type="checkbox" id="toggleMenu">
+
+		<!-- Label for the Toggle Checkbox with Icon and Description -->
+		<label for="toggleMenu" class="toggle-menu">
+			<img src="../assets/images/sandwich_menu.png" alt="Menu" class="menu">
+		</label>
+
+		<!-- Header menu buttons outside of the label -->
+		<div class="hb">
+			<!-- Build your character (Menu button) -->
+			<a href=" " class="menuInsideItem"><p  style="opacity: 1">Build your character</p></a>
+			<a href=" " class="menuItem">
+				<img src="../assets/images/maru.png" alt="Build your character" class="build" style="opacity: 1">
+			</a>
+
+			<!-- Pelican Town (Menu button) -->
+			<a href="community.html" class="menuInsideItem"><p>Meet Pelican Town</p></a>
+			<a href="community.html" class="menuItem">
+				<img src="../assets/images/community_center.png" alt="Meet Pelican Town" class="pelt">
+			</a>
+
+			<!-- Switch to Joja's World (Menu button) -->
+			<a href="#" class="menuInsideItem"><p>Dark Mode</p></a>
+			<a href="#" class="menuItem">
+				<img src="../assets/images/torch.png" alt="Dark mode" class="darkview">
+			</a>
+		</div>
+
+		<main>
+
+
+		<!-- Clock -->
+
+			<div class="clock">
+				<div class="clockday">
+					<span id="cd"></span>
+				</div>
+
+				<div class="clocktime">
+					<span id="ct"></span>
+				</div>
+
+				<div class="counter">
+					<span id="count">0</span>
+				</div>
+
+				<img src="../assets/images/clock.png" alt="Stardew Valley Clock">
+			</div>
+
+
+		<!-- See you in HTML6, <marquee>!-->
+			
+			<div class="movingText">
+				<p>Welcome to Stardew Valley's UNOFFICIAL Character Builder! As you can see, this page is a click-bait, since you can only create a SDV Avatar. Either way, feel free to use all of this iframe's features to create your SDV avatar :)</p>
+			</div>
+
+
+		<!-- Builder feature -->
+			<iframe class="buildframe" 
+				allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share" 
+				src="https://html-classic.itch.zone/html/10219310/Stardew-Valley-Character-Creator%20-%20Copy/index.html" 
+				id="game_drop" 
+				>
+			</iframe>
+		</main>
+
+		<footer>
+
+			<div class="credits">
+				<a href="https://www.stardewvalley.net/author/concernedape/" target="_blank">
+					<img src="../assets/images/concernedape.gif" alt="Developed by Concerned Ape" class="creditdca">
+				</a>
+				
+				<a href="http://jigsaw.w3.org/css-validator">
+					<img 
+					src="../assets/images/vcss.png"
+					alt="CSS valid!"
+					class="CSSValid"
+					>
+				</a>
+			</div>	
+		</footer>
+		
+	</body>
+	
+	<!-- Script area -->
+	<script src="../js/build.js"></script>
+</html>

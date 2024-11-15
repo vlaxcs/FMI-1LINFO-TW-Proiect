@@ -1,0 +1,675 @@
+@font-face{
+  font-family: 'StardewFont';
+  src: url('../assets/fonts/stardew-item-font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Consolas';
+  src: url('../assets/fonts/consolas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+	--yellow: #f5ba69;
+	--yellowish: #cf9f4f;
+	--brown: #bf8f53;
+	--blue:#4a8cef;
+	--green:#8df49d;
+}
+
+body{
+	font-family: 'MyCustomFont', sans-serif;
+	overflow-x: hidden;
+	margin: 0;
+}
+
+body{
+	background-image: url('../assets/images/background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	cursor: url('../assets/images/default.cur'), auto;
+}
+
+header img{
+	position: absolute;
+	width: 10vw;
+	top: 2vh;
+	left: 2vw;
+	transition: left 0.2s ease;
+	z-index: 100;
+}
+header img:hover{
+	width: 10vw;
+	left: 4vw;
+}
+
+header{
+	position: absolute;
+	width: 100vw;
+	height: 7vw;
+	top: 0vw;
+	left: 0vw;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+header>a>img{
+	cursor: url('../assets/images/bus.png'), auto;
+}
+
+footer{
+	position: relative;
+	width: 100%;
+	height: 45vw;
+	bottom: -30vh;
+	left: 0;
+	margin-bottom: 0;
+	background-image: url('../assets/images/bgfooter.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.goofy{
+	position: fixed;
+	top: 80vh;
+	left: 2%;
+	opacity: 1;
+	z-index: 10;
+	background-color: transparent;
+	border: none;
+	width: 5.5vw;
+}
+
+.goofy{
+	font-family: 'StardewFont', sans-serif;
+	font-size: 1vw;
+	background-color: red;
+	color: white;
+	padding: 1vw;
+	border: ridge 0.4vh rgb(255, 0, 0);
+	border-radius: 10px;
+	transition: left 0.1s ease;
+}
+
+.goofy:hover{
+	left: 3%;
+	transition: left 0.1s ease;
+	cursor:url('../assets/images/shanecursor.png') 4 4, auto;
+}
+
+.goofy p::selection{
+	background-color: transparent;
+}
+
+#uninstall{
+	visibility: collapse;
+}
+
+.install{
+    position: fixed;
+    visibility: collapse;
+    bottom: 0;
+   	margin-top: 30vh;
+    padding: 20vh;
+    transition: top 2s ease;
+}
+
+.cover{
+	position: fixed;
+    visibility: collapse;
+    bottom: 0;
+    height: 200vh;
+    transition: top 2s ease;
+}
+
+.install {
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    position: absolute;  
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.install img {
+    width: 10vw;
+    height: 10vw;
+	opacity: 0;
+	transition: opacity 2s ease;
+}
+
+.install p{
+	font-family: 'StardewFont', sans-serif;
+	color: red;
+	font-size: 2vw;
+	opacity: 0;
+	transition: opacity 2s ease;
+}
+
+.install img::selection{
+	background-color: transparent;
+}
+
+.install p::selection{
+	background-color: red;
+	color: black;
+}
+
+.install p a{
+	text-decoration:dotted;
+	color: pink;
+	cursor: url('../assets/images/star.png') 4 4, auto;
+}
+
+.install p a::selection{
+	background-color: pink;
+	color: black;
+}
+
+.install br::selection{
+	background-color: transparent;
+}
+
+a i:hover{
+	cursor: url('../assets/images/grab.cur') 4 4, auto;
+}
+
+#uninstall:checked ~ .cover,
+#uninstall:checked ~ .install{
+	visibility: visible;
+	width: 100%;
+	background-color: black;
+	top: 0vh;
+	z-index: 99;
+}
+
+#uninstall:checked ~ .install img,
+#uninstall:checked ~ .install p{
+	opacity: 1;
+	transition: opacity 1s ease;
+}
+
+#uninstall:checked ~ .install div{
+	visibility: visible;
+	z-index: 100;
+	opacity: 1;
+}
+
+.ungoofing{
+	position: relative;
+	top: 30vh;
+	visibility: collapse;
+	width: 10vw;
+	height: 10vw;
+	background-color: transparent;
+}
+
+.ungoofing p{
+	padding-top: 50vh;
+}
+
+.ungoofing p label{
+	font-size: 8vw;
+}
+
+.ungoofing p label:hover{
+	cursor: url('../assets/images/shanecursor.png') 4 4, auto;
+	color: transparent;
+}
+
+.install:hover,
+.cover:hover{
+	cursor:url('../assets/images/beer.png') 4 4, auto;
+}
+
+body img::selection{
+	background-color: transparent;
+}
+
+.menu, .build, .pelt, .darkview{
+	width: 3vw;
+	height: 3vw;
+	top: 2vw;
+	opacity: 0.4;
+	z-index: 100;
+	transition: opacity 0.2s ease;
+}
+
+.menu{
+	position: absolute;
+	right: 2vw;
+	opacity: 0.4;
+	rotate: 90deg;
+	transition: opacity 0.2s ease;
+}
+
+.menu:hover + .menuDesc, .menu:hover, .build:hover, .pelt:hover, .darkview:hover{
+	visibility: visible;
+	cursor: url('../assets/images/grab.cur'), auto;
+	opacity: 1;
+}
+
+#toggleMenu{
+	display: none;
+}
+
+.hb {
+    margin-top: 2vw;
+    margin-left: 0;        
+    display: flex;
+    flex-direction: row;
+    transform: translateX(70%); 
+    transition: transform 0.3s ease;
+}
+
+.menuItem{
+	margin-left: 5%;
+	z-index: 100;
+	padding: 0;
+	border: none;
+	line-height: 0;
+	width: 0;
+	height: 0;
+}
+
+.clock{
+	position: fixed;
+	z-index: 99;
+}
+
+.clockday,
+.clocktime,
+.counter{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-image: linear-gradient(#ffd87f, #e7a160);
+	width: 55%;
+	height: 8.2%;
+	margin-left: 43%;
+	border-radius: 2px;
+}
+
+.clockday{
+	margin-top: 8.75vw;
+}
+
+.clocktime{
+	margin-top: 12.4vw;
+}
+
+.counter{
+	margin-top: 15.85vw;
+	margin-left: 28%;
+	width: 66%;
+	height: 8.6%;
+}
+
+.clock div span{
+	font-family: 'StardewFont', sans-serif;
+	color: #221122;
+}
+
+.clockday span{
+	margin-top: 9%;
+	font-size: 1.7vw;
+}
+
+.clocktime span{
+	margin-top: 8%;
+	font-size: 1.8vw;
+}
+
+.counter span{
+	margin-top: 4%;
+	font-size: 1.9vw;
+}
+
+.clock img{
+	margin-top: 8vw;
+	width: 12vw;
+	margin-left: 5%;
+}
+
+.clock div span::selection{
+	background-color: transparent;
+}
+
+#toggleMenu:checked ~ .toggle-menu .menu {
+    opacity: 1;
+}
+
+#toggleMenu:checked ~ .menuItem {
+    margin-left: 50%; 
+	padding-right: 20%;
+}
+
+#toggleMenu:checked ~ .hb {
+    transform: translateX(25%);  
+}
+#toggleMenu:checked ~ .hb .menuItem {
+    margin-left: 20%;  
+}
+
+#toggleMenu:checked ~ .hb .menuInsideItem p{
+	display: flex;
+	visibility: visible;
+
+	margin-top: 1vw;
+	width: 30vh;
+	height: auto;
+	font-size: 1vw;
+	margin-left: 23.5vw;
+	line-height:normal;
+
+	text-decoration: none;
+	font-family: 'StardewFont', sans-serif;
+	color: #f4d000;
+	opacity: 0.7;
+	transition: opacity 0.3s ease;
+}
+
+#toggleMenu:checked ~ .hb .menuInsideItem:hover p{
+	opacity: 1;
+	transition: opacity 0.2s ease;
+	cursor: url('../assets/images/grab.cur'), auto;
+}
+
+.menuInsideItem{
+	visibility: collapse;
+	width: 0px;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 0;
+    line-height: 0;
+	text-decoration: none;
+}
+
+.menuInsideItem p{
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+.hb a:nth-of-type(1):hover ~ .menuItem .build,
+.hb a:nth-of-type(3):hover ~ .menuItem .pelt,
+.hb a:nth-of-type(5):hover ~ .menuItem .darkview{
+    opacity: 1;
+}
+
+.menuDesc{
+	visibility: collapse;
+	opacity: 0;
+	position: absolute;
+	top: 7vw;
+	right: 0vw;
+	width: 10vw;
+	height: 3vh;
+	background-image: linear-gradient(var(--yellowish), var(--yellow), var(--yellowish));
+	border: ridge 1vh var(--brown);
+	border-radius: 5vh;
+	transition: opacity 0.5s ease;
+}
+.menuDesc p{
+	overflow: hidden;
+	font-family: 'StardewFont', sans-serif;
+	font-size: 1.2rem;
+	vertical-align: middle;
+}
+
+.scroll{
+	top: 80vh;
+	position: sticky;
+	right: 2vw;
+	align-self: flex-end;
+	margin-left: auto;
+	width: 6vw;
+	transition: top 0.5s ease;
+}
+
+.scroll:hover{
+	top: 77vh;
+	transition: top 0.5s ease;
+}
+
+.scroll img::selection{
+	background-color: transparent;
+}
+
+div.scroll img{
+	width: 6vw;
+	border-radius: 20vw;
+}
+
+div.scroll img:hover{
+	cursor: url('../assets/images/grab.cur'), auto;
+}
+
+main>div>iframe{
+	top: 8vw;
+	width: 50vw;
+	max-width: 50vw;
+	height: 300px;
+	max-height: 20vw;
+}
+
+.chapter{
+	position: relative;
+	background-image: linear-gradient(var(--yellowish), var(--yellow), var(--yellowish));
+	border: ridge 1vh var(--brown);
+	border-radius: 20px 40px 10px 40px;
+	width: 70%;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	font-family: 'StardewFont';
+	margin-top: 1vw;
+	margin-left: 15%;
+	margin-bottom: 2vw;
+}
+
+.steam-widget {
+    width: 100vw;
+    height: 190px;
+    border: none; 
+}
+
+.chapter p{
+	text-align: justify;
+}
+
+.chapter p:hover{
+	cursor: url('../assets/images/selector3.png') 8 8, auto !important;
+}
+
+.chapter h2{
+	font-size: 1.7vw;
+}
+.chapter h2:hover{
+	cursor: url('../assets/images/selector2.png') 4 4, auto !important;
+}
+
+.chapter p{
+	font-size: 1.2vw;
+}
+
+.chapter p::selection,
+.chapter p i::selection,
+.chapter p strong::selection{
+	font-size: 1.3vw;
+	background-color: black;
+	color: rgb(210, 2, 210);
+}
+
+.chapter h2::selection,
+.chapter br::selection,
+.chapter a::selection,
+.chapter a span::selection,
+.chapter a img::selection{
+	color: #411096;
+	background-color: transparent;
+}
+
+.chapter p a{
+	color: var(--brown);
+}
+
+.title{
+	display: grid;
+    place-items: center;
+    height: 1.5vw;
+	padding-top: 1vw;
+	padding-bottom: 1.5vw;
+}
+
+.indiegames img:first-child{
+	width: 60%;
+	margin-left: 20%;
+	border-radius: 10px;
+	border: #a970ff 2px solid;
+}
+
+.indiegames figcaption i:first-child{
+	margin-left: 20%;
+	font-size: 1vw;
+}
+
+.indiegames img:first-child:hover,
+.indiegames figcaption i:first-child:hover{
+	cursor: url('../assets/images/star.png') 4 4, auto;
+	animation: bounce 0.6s ease-in-out;
+}
+
+.indiegames figcaption i:first-child::selection{
+	background-color: #a970ff;
+	color: white;
+}
+
+@keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+.credits{
+	padding: 5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.info{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.buygame{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	padding-bottom: 2vw;
+	padding-top: 2vw;
+	width: 100;
+	height: 190;
+}
+
+.buywidget{
+	border-radius: 20px;
+	width: 60%;
+	left: 20%;
+	height: 20vw;
+	border: none;
+	
+}
+
+.pricelessInfo{
+	font-size: 1.5vw !important;
+}
+
+.pricelessInfo a{
+	text-decoration: none;
+	color:black!important;
+}
+
+.pricelessInfo a:hover{
+	cursor:url('../assets/images/diamond.png') 4 4, auto;
+	color: rgb(120, 0, 120)!important;
+}
+
+.pricelessInfo a span{
+	cursor:url('../assets/images/glasses.png') 4 4, auto !important;
+	font-size: 1vw;
+}
+
+.pricelessInfo a:nth-of-type(1):hover,
+.pricelessInfo a:nth-of-type(5):hover,
+.pricelessInfo a:nth-of-type(7):hover,
+.pricelessInfo a:nth-of-type(9):hover,
+.pricelessInfo a:nth-of-type(11):hover,
+.pricelessInfo a:hover span{
+	cursor:url('../assets/images/glasses.png') 4 4, auto !important;
+}
+
+.compDevs{
+	width: 1.5vw;
+}
+
+.creditdca{
+	width: 30vw;
+}
+.credits img:hover{
+	cursor: url('../assets/images/grab.cur') 4 4, auto;
+}
+
+.CSSValid{
+	opacity: 0.8;
+	width: 10vw;
+	transform: translateX(30%);
+	transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.CSSValid:hover{
+	opacity: 1;
+	transform: translateX(10%);
+	transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+@media only screen and (max-width: 700px) {
+	footer {
+		background-image: url('../assets/images/bgmedia600.png');
+	}
+}
+
+.money {
+	position: fixed;
+	width: 2vw;
+	animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+	from {
+		top: -100px;
+		opacity: 1;
+	}
+	to {
+		top: 100vh;
+		opacity: 0;
+	}
+}
+

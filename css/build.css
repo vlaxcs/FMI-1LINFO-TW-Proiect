@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    margin: 0;
+}
+
+.buildframe {
+	margin-top: 10vw;
+    width: 70vw;
+    height: 55vw;
+	margin-left: 15vw;
+    border: var(--blue) 10px ridge; 
+    border-radius: 2vw;
+}
+
+.buildframe:hover{
+	cursor:url('../assets/images/grab.cur') 4 4, auto !important;
+}
+
+.movingText{
+	display: flex;
+    position: absolute;
+    width: 100%;
+    height: 3vw;
+    top: 7vw;
+	font-family: 'StardewFont', sans-serif;
+	font-size: 1.6vw;
+    background-color: rgba(74, 140, 239, 0.8);
+	color: white;
+}
+
+.movingText p {
+    display: inline-block;
+    font-family: 'StardewFont', sans-serif;
+    font-size: 1.6vw;
+    margin-top: 0.6vw;
+    white-space: nowrap;
+    animation: marqueeAnimation 20s linear infinite;
+}
+
+@keyframes marqueeAnimation {
+    0% {
+      transform: translateX(70%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+
+.movingText p::selection{
+	color: yellow;
+}
+
+.movingText p:hover{
+	cursor: url('../assets/images/feather.png') 4 4, auto;
+}

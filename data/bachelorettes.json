@@ -1,0 +1,52 @@
+{
+  "Bachelorettes": {
+    "Abigail": {
+      "birthday": "Fall 13",
+      "livesIn": "Pelican Town",
+      "address": "Pierre's General Store",
+      "marriageStatus": true,
+      "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/2e/Amethyst.png/24px-Amethyst.png",
+      "lovedGift": "Amethyst"
+    },
+    "Emily": {
+      "birthday": "Spring 27",
+      "livesIn": "Pelican Town",
+      "address": "2 Willow Lane",
+      "marriageStatus": true,
+      "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/2e/Amethyst.png/24px-Amethyst.png",
+      "lovedGift": "Amethyst"
+    },
+    "Haley": {
+      "birthday": "Spring 14",
+      "livesIn": "Pelican Town",
+      "address": "2 Willow Lane",
+      "marriageStatus": true,
+      "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/2f/Coconut.png/24px-Coconut.png",
+      "lovedGift": "Coconut"
+    },
+    "Leah": {
+      "birthday": "Winter 23",
+      "livesIn": "Cindersap Forest",
+      "address": "Leah's Cottage",
+      "marriageStatus": true,
+      "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/c/c8/Goat_Cheese.png/24px-Goat_Cheese.png",
+      "lovedGift": "Goat Cheese"
+    },
+    "Maru": {
+      "birthday": "Summer 10",
+      "livesIn": "The Mountain",
+      "address": "24 Mountain Road",
+      "marriageStatus": true,
+      "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/25/Battery_Pack.png/24px-Battery_Pack.png",
+      "lovedGift": "Battery Pack"
+    },
+    "Penny": {
+      "birthday": "Fall 2",
+      "livesIn": "Pelican Town",
+      "address": "Trailer",
+      "marriageStatus": true,
+      "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/e/ea/Diamond.png/24px-Diamond.png",
+      "lovedGift": "Diamond"
+    }
+  }
+}

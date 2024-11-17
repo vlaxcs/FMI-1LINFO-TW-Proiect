@@ -65,3 +65,16 @@
 .marriageFalse::after{
     content: "No";
 }
+
+#birthday::before{
+    content:"Birthday: ";
+}
+#town::before{
+    content:"Lives in:";
+}
+#adress::before{
+    content: "Adress: ";
+}
+#gift::before{
+    content: "Most loved gift: ";
+}

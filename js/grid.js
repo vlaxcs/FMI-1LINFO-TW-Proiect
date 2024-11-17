@@ -1,32 +1,40 @@
-window.onload = function() {
+fetch('../data/bachelors.json')
+  .then(response => response.json())
+  .then(bachelorsDict => {
 
-    fetch('../data/bachelors.json')
-    .then(response => response.json())
-    .then(data => {
-      console.log(data.name);
-      console.log(data.age);
-    })
-    .catch(error => {
-      console.error('Error fetching data:', error);
-    });
+    const bachelors = bachelorsDict;
 
-var characters ={}
+    for (let bachelor in bachelors) {
+      console.log(bachelor + ": " + bachelors[bachelor].lovedGift);
+    }
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
 
-function addCharacters(characters, name, birthday, town, adress, isMarried, lovedGift) {
-    characters[name] = {
-        birthday: birthday,
-        town: town,
-        adress: adress,
-        isMarried: isMarried,
-        lovedGift: lovedGift
-    };
-}
+console.log("Data from bachelors.json loaded!");
 
-addCharacters(characters, "Alex", "Summer 13", "Pelican Town", "1 River Road", "Yes", "Complete Breakfast")
+fetch('../data/bachelorettes.json')
+  .then(response => response.json())
+  .then(bachelorettesDict => {
 
-for (let key in characters){
-    console.log(key);
-    console.log(characters[key]);
-}
+    console.log(bachelorettesDict)
+    const bachelorettes = bachelorettesDict;
 
-};
+    for (girl in bachelorettes){
+        console.log(girl, bachelorettes[girl]);
+        for (key in bachelorettes[girl]){
+            value = bachelorettes[girl][key];
+            console.log(value);
+        }
+    }
+
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+
+console.log("Data from bachelorettes.json loaded!");
+
+
+console.log(characters);

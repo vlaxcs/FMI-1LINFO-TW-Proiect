@@ -1,52 +1,50 @@
 {
-  "Bachelors": {
-    "Alex": {
-      "birthday": "Summer 13",
-      "livesIn": "Pelican Town",
-      "address": "1 River Road",
-      "marriageStatus": true,
-      "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/3/3d/Complete_Breakfast.png/24px-Complete_Breakfast.png",
-      "lovedGift": "Complete Breakfast"
-    },
-    "Elliott": {
-      "birthday": "Fall 5",
-      "livesIn": "The Beach",
-      "address": "Elliott's Cabin",
-      "marriageStatus": true,
-      "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/7/70/Crab_Cakes.png/24px-Crab_Cakes.png",
-      "lovedGift": "Crab Cakes"
-    },
-    "Harvey": {
-      "birthday": "Winter 14",
-      "livesIn": "Pelican Town",
-      "address": "Medical Clinic",
-      "marriageStatus": true,
-      "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/e/e9/Coffee.png/24px-Coffee.png",
-      "lovedGift": "Coffee"
-    },
-    "Sam": {
-      "birthday": "Summer 17",
-      "livesIn": "Pelican Town",
-      "address": "1 Willow Lane",
-      "marriageStatus": true,
-      "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/3/32/Cactus_Fruit.png/24px-Cactus_Fruit.png",
-      "lovedGift": "Cactus Fruit"
-    },
-    "Sebastian": {
-      "birthday": "Winter 10",
-      "livesIn": "The Mountain",
-      "address": "24 Mountain Road",
-      "marriageStatus": true,
-      "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/23/Green_Frog_Egg.png/24px-Green_Frog_Egg.png",
-      "lovedGift": "Frog Egg"
-    },
-    "Shane": {
-      "birthday": "Spring 20",
-      "livesIn": "Cindersap Forest",
-      "address": "Marnie's Ranch",
-      "marriageStatus": true,
-      "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/b/b3/Beer.png/24px-Beer.png",
-      "lovedGift": "Beer"
-    }
+  "Alex": {
+    "birthday": "Summer 13",
+    "livesIn": "Pelican Town",
+    "address": "1 River Road",
+    "marriageStatus": true,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/3/3d/Complete_Breakfast.png/24px-Complete_Breakfast.png",
+    "lovedGift": "Complete Breakfast"
+  },
+  "Elliott": {
+    "birthday": "Fall 5",
+    "livesIn": "The Beach",
+    "address": "Elliott's Cabin",
+    "marriageStatus": true,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/7/70/Crab_Cakes.png/24px-Crab_Cakes.png",
+    "lovedGift": "Crab Cakes"
+  },
+  "Harvey": {
+    "birthday": "Winter 14",
+    "livesIn": "Pelican Town",
+    "address": "Medical Clinic",
+    "marriageStatus": true,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/e/e9/Coffee.png/24px-Coffee.png",
+    "lovedGift": "Coffee"
+  },
+  "Sam": {
+    "birthday": "Summer 17",
+    "livesIn": "Pelican Town",
+    "address": "1 Willow Lane",
+    "marriageStatus": true,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/3/32/Cactus_Fruit.png/24px-Cactus_Fruit.png",
+    "lovedGift": "Cactus Fruit"
+  },
+  "Sebastian": {
+    "birthday": "Winter 10",
+    "livesIn": "The Mountain",
+    "address": "24 Mountain Road",
+    "marriageStatus": true,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/23/Green_Frog_Egg.png/24px-Green_Frog_Egg.png",
+    "lovedGift": "Frog Egg"
+  },
+  "Shane": {
+    "birthday": "Spring 20",
+    "livesIn": "Cindersap Forest",
+    "address": "Marnie's Ranch",
+    "marriageStatus": true,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/b/b3/Beer.png/24px-Beer.png",
+    "lovedGift": "Beer"
   }
 }

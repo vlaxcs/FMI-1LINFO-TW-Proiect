@@ -1,0 +1,178 @@
+{
+  "Caroline": {
+    "birthday": "Winter 7",
+    "livesIn": "Pelican Town",
+    "address": "Pierre's General Store",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/d/d5/Fish_Taco.png/24px-Fish_Taco.png",
+    "lovedGift": "Fish Taco"
+  },
+  "Clint": {
+    "birthday": "Winter 26",
+    "livesIn": "Pelican Town",
+    "address": "Blacksmith",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/2e/Amethyst.png/24px-Amethyst.png",
+    "lovedGift": "Amethyst"
+  },
+  "Demetrius": {
+    "birthday": "Summer 19",
+    "livesIn": "The Mountain",
+    "address": "24 Mountain Road",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/24/Bean_Hotpot.png/24px-Bean_Hotpot.png",
+    "lovedGift": "Bean Hotpot"
+  },
+  "Dwarf": {
+    "birthday": "Summer 22",
+    "livesIn": "The Mines",
+    "address": "Eastern Cave",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/2e/Amethyst.png/24px-Amethyst.png",
+    "lovedGift": "Amethyst"
+  },
+  "Evelyn": {
+    "birthday": "Winter 20",
+    "livesIn": "Pelican Town",
+    "address": "1 River Road",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/a/a4/Beet.png/24px-Beet.png",
+    "lovedGift": "Beet"
+  },
+  "George": {
+    "birthday": "Fall 24",
+    "livesIn": "Pelican Town",
+    "address": "1 River Road",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/4/4a/Fried_Mushroom.png/24px-Fried_Mushroom.png",
+    "lovedGift": "Fried Mushroom"
+  },
+  "Gus": {
+    "birthday": "Summer 8",
+    "livesIn": "Pelican Town",
+    "address": "The Stardrop Saloon",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/e/ea/Diamond.png/24px-Diamond.png",
+    "lovedGift": "Diamond"
+  },
+  "Jas": {
+    "birthday": "Summer 4",
+    "livesIn": "Cindersap Forest",
+    "address": "Marnie's Ranch",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/c/c0/Ancient_Doll.png/24px-Ancient_Doll.png",
+    "lovedGift": "Ancient Doll"
+  },
+  "Jodi": {
+    "birthday": "Fall 11",
+    "livesIn": "Pelican Town",
+    "address": "1 Willow Lane",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/8/87/Chocolate_Cake.png/24px-Chocolate_Cake.png",
+    "lovedGift": "Chocolate Cake"
+  },
+  "Kent": {
+    "birthday": "Spring 4",
+    "livesIn": "Pelican Town",
+    "address": "1 Willow Lane",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/2d/Fiddlehead_Risotto.png/24px-Fiddlehead_Risotto.png",
+    "lovedGift": "Fiddlehead Risotto"
+  },
+  "Krobus": {
+    "birthday": "Winter 1",
+    "livesIn": "The Sewers",
+    "address": "Krobus' Shop",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/e/ea/Diamond.png/24px-Diamond.png",
+    "lovedGift": "Diamond"
+  },
+  "Leo": {
+    "birthday": "Summer 26",
+    "livesIn": "Ginger Island",
+    "address": "Hut (<6 ) Treehouse (≥6 )",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/f/f9/Duck_Feather.png/24px-Duck_Feather.png",
+    "lovedGift": "Duck Feather"
+  },
+  "Lewis": {
+    "birthday": "Spring 7",
+    "livesIn": "Pelican Town",
+    "address": "Mayor's Manor",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/f/f4/Autumn%27s_Bounty.png/24px-Autumn%27s_Bounty.png",
+    "lovedGift": "Autumn's Bounty"
+  },
+  "Linus": {
+    "birthday": "Winter 3",
+    "livesIn": "The Mountain",
+    "address": "Tent",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/9/9b/Blueberry_Tart.png/24px-Blueberry_Tart.png",
+    "lovedGift": "Blueberry Tart"
+  },
+  "Marnie": {
+    "birthday": "Fall 18",
+    "livesIn": "Cindersap Forest",
+    "address": "Marnie's Ranch",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/e/ea/Diamond.png/24px-Diamond.png",
+    "lovedGift": "Diamond"
+  },
+  "Pam": {
+    "birthday": "Spring 18",
+    "livesIn": "Pelican Town",
+    "address": "Trailer",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/b/b3/Beer.png/24px-Beer.png",
+    "lovedGift": "Beer"
+  },
+  "Pierre": {
+    "birthday": "Spring 26",
+    "livesIn": "Pelican Town",
+    "address": "Pierre's General Store",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/25/Fried_Calamari.png/24px-Fried_Calamari.png",
+    "lovedGift": "Fried Calamari"
+  },
+  "Robin": {
+    "birthday": "Fall 21",
+    "livesIn": "The Mountain",
+    "address": "24 Mountain Road",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/c/c8/Goat_Cheese.png/24px-Goat_Cheese.png",
+    "lovedGift": "Goat Cheese"
+  },
+  "Sandy": {
+    "birthday": "Fall 15",
+    "livesIn": "The Desert",
+    "address": "Oasis",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/2f/Crocus.png/24px-Crocus.png",
+    "lovedGift": "Crocus"
+  },
+  "Vincent": {
+    "birthday": "Spring 10",
+    "livesIn": "Pelican Town",
+    "address": "1 Willow Lane",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/9/9d/Cranberry_Candy.png/24px-Cranberry_Candy.png",
+    "lovedGift": "Cranberry Candy"
+  },
+  "Willy": {
+    "birthday": "Summer 24",
+    "livesIn": "The Beach",
+    "address": "Fish Shop",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/9/99/Catfish.png/24px-Catfish.png",
+    "lovedGift": "Catfish"
+  },
+  "Wizard": {
+    "birthday": "Winter 17",
+    "livesIn": "Cindersap Forest",
+    "address": "Wizard's Tower",
+    "marriageStatus": false,
+    "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/d/df/Book_of_Mysteries.png/24px-Book_of_Mysteries.png",
+    "lovedGift": "Book of Mysteries"
+  }
+}

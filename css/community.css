@@ -70,9 +70,9 @@
     content:"Birthday: ";
 }
 #town::before{
-    content:"Lives in:";
+    content:"Lives in: ";
 }
-#adress::before{
+#address::before{
     content: "Adress: ";
 }
 #gift::before{

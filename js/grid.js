@@ -54,8 +54,7 @@ async function main() {
     await AjaxBachelorettes();
     await AjaxNMCandidates();
 
-    function populate() {
-        let chindex = 0;
+    function populate(chindex) {
         let gridItem = document.querySelector('#grid-div');
         const nameSpan = gridItem.querySelector('#name');
         nameSpan.textContent = names[chindex];
@@ -80,7 +79,7 @@ async function main() {
             gridItem.classList.add('marriageFalse');
         } 
     }
-    populate();
+    populate(0);
 }
 
 main();

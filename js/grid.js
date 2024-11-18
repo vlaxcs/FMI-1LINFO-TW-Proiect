@@ -49,12 +49,11 @@ async function AjaxNMCandidates() {
     }
 }
 
-async function main() {
-    await AjaxBachelors();
-    await AjaxBachelorettes();
-    await AjaxNMCandidates();
+function populate(chindex) {
 
-    function populate(chindex) {
+// if chindex > 0
+// content din primul rand se muta pe al doilea cu chindex - 1, iar pe primul rand vin elementele noi
+
         let gridItem = document.querySelector('#grid-div');
         const nameSpan = gridItem.querySelector('#name');
         nameSpan.textContent = names[chindex];
@@ -69,8 +68,8 @@ async function main() {
         const adressSpan = gridItem.querySelector('#address');
         adressSpan.textContent = characters[chindex].address;
 
-        const marriageSpan = gridItem.quertSelector('#marriage');
-        if (characters[chindex]) 
+        const marriageSpan = gridItem.querySelector('#marriage');
+        if (characters[chindex].isMarried) 
         {
             gridItem.classList.add('marriageTrue');
         }
@@ -78,8 +77,17 @@ async function main() {
         {
             gridItem.classList.add('marriageFalse');
         } 
-    }
+}
+
+async function main() {
+    // await loadingScreen();
+    await AjaxBachelors();
+    await AjaxBachelorettes();
+    await AjaxNMCandidates();
+    // await loadingScreenRemove(); cu animatie shukara
+
     populate(0);
 }
 
 main();
+// show button which changes chindex to chindex + 1

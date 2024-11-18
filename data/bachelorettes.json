@@ -5,7 +5,8 @@
     "address": "Pierre's General Store",
     "marriageStatus": true,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/2e/Amethyst.png/24px-Amethyst.png",
-    "lovedGift": "Amethyst"
+    "lovedGift": "Amethyst",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/8/88/Abigail.png"
   },
   "Emily": {
     "birthday": "Spring 27",
@@ -13,7 +14,8 @@
     "address": "2 Willow Lane",
     "marriageStatus": true,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/2e/Amethyst.png/24px-Amethyst.png",
-    "lovedGift": "Amethyst"
+    "lovedGift": "Amethyst",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/2/28/Emily.png"
   },
   "Haley": {
     "birthday": "Spring 14",
@@ -21,7 +23,8 @@
     "address": "2 Willow Lane",
     "marriageStatus": true,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/2f/Coconut.png/24px-Coconut.png",
-    "lovedGift": "Coconut"
+    "lovedGift": "Coconut",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/1/1b/Haley.png"
   },
   "Leah": {
     "birthday": "Winter 23",
@@ -29,7 +32,8 @@
     "address": "Leah's Cottage",
     "marriageStatus": true,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/c/c8/Goat_Cheese.png/24px-Goat_Cheese.png",
-    "lovedGift": "Goat Cheese"
+    "lovedGift": "Goat Cheese",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/e/e6/Leah.png"
   },
   "Maru": {
     "birthday": "Summer 10",
@@ -37,7 +41,8 @@
     "address": "24 Mountain Road",
     "marriageStatus": true,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/25/Battery_Pack.png/24px-Battery_Pack.png",
-    "lovedGift": "Battery Pack"
+    "lovedGift": "Battery Pack",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/f/f8/Maru.png"
   },
   "Penny": {
     "birthday": "Fall 2",
@@ -45,6 +50,7 @@
     "address": "Trailer",
     "marriageStatus": true,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/e/ea/Diamond.png/24px-Diamond.png",
-    "lovedGift": "Diamond"
+    "lovedGift": "Diamond",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/a/ab/Penny.png"
   }
 }

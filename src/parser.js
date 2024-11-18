@@ -26,6 +26,7 @@ async function fetchVillagerInfo() {
             const marriageStatus = $('#infoboxsection:contains("Marriage")').next().text().trim();
             const lovedGiftImgSrc = $('#infoboxsection:contains("Loved Gifts")').next().find('span.nametemplate').first().find('img').attr('src');
             const lovedGift = $('#infoboxsection:contains("Loved Gifts")').next().find('span.nametemplate').first().text().trim();
+            const profilePic = $('#infoboxborder img').first().attr('src');
 
             Bachelors[name] = {
                 birthday,
@@ -33,11 +34,12 @@ async function fetchVillagerInfo() {
                 address,
                 marriageStatus: marriageStatus === 'Yes',
                 lovedGiftImgSrc: "https://stardewvalleywiki.com" + lovedGiftImgSrc,
-                lovedGift
+                lovedGift,
+                profilePic: "https://stardewvalleywiki.com" + profilePic
             };
 
         } catch (error) {
-            console.error('No data received from Wiki Stardew Valley!', error);
+            console.error('No data received from Wiki Stardew Valley in Bachelors!', error);
         }
     }
 
@@ -55,18 +57,20 @@ async function fetchVillagerInfo() {
             const marriageStatus = $('#infoboxsection:contains("Marriage")').next().text().trim();
             const lovedGiftImgSrc = $('#infoboxsection:contains("Loved Gifts")').next().find('span.nametemplate').first().find('img').attr('src');
             const lovedGift = $('#infoboxsection:contains("Loved Gifts")').next().find('span.nametemplate').first().text().trim();
-
+            const profilePic = $('#infoboxborder img').first().attr('src');
+            
             Bachelorettes[name] = {
                 birthday,
                 livesIn,
                 address,
                 marriageStatus: marriageStatus === 'Yes',
                 lovedGiftImgSrc: "https://stardewvalleywiki.com" + lovedGiftImgSrc,
-                lovedGift
+                lovedGift,
+                profilePic: "https://stardewvalleywiki.com" + profilePic
             };
 
         } catch (error) {
-            console.error('No data received from Wiki Stardew Valley!', error);
+            console.error('No data received from Wiki Stardew Valley in Bachelorettes!', error);
         }
     }
 
@@ -84,6 +88,7 @@ async function fetchVillagerInfo() {
             const marriageStatus = $('#infoboxsection:contains("Marriage")').next().text().trim();
             const lovedGiftImgSrc = $('#infoboxsection:contains("Loved Gifts")').next().find('span.nametemplate').first().find('img').attr('src');
             const lovedGift = $('#infoboxsection:contains("Loved Gifts")').next().find('span.nametemplate').first().text().trim();
+            const profilePic = $('#infoboxborder img').first().attr('src');
 
             nonMarriage[name] = {
                 birthday,
@@ -91,11 +96,12 @@ async function fetchVillagerInfo() {
                 address,
                 marriageStatus: marriageStatus === 'Yes',
                 lovedGiftImgSrc: "https://stardewvalleywiki.com" + lovedGiftImgSrc,
-                lovedGift
+                lovedGift,
+                profilePic: "https://stardewvalleywiki.com" + profilePic
             };
 
         } catch (error) {
-            console.error('No data received from Wiki Stardew Valley!', error);
+            console.error('No data received from Wiki Stardew Valley in Non-Marriage Candidates!', error);
         }
     }
 

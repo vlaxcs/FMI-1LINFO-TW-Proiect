@@ -1,3 +1,11 @@
+:root{
+	--yellow: #f5ba69;
+	--yellowish: #cf9f4f;
+	--brown: #bf8f53;
+	--blue:#4a8cef;
+	--green:#8df49d;
+}
+
 .grid-container{
     display: grid;
     justify-items: center;
@@ -21,7 +29,8 @@
     height: auto;
 }
 
-.grid-item{
+.grid-item:nth-of-type(4n + 1),
+.grid-item:nth-of-type(4n + 2){
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,12 +43,21 @@
     min-width: 20vw;
 }
 
-.grid-item img{
-    width: 15vw;
-    height: 15vw;
+.grid-item:nth-of-type(4n + 3),
+.grid-item:nth-of-type(4n + 4){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5vw;
+    width: 30vw;
+    border: 4px white solid;
+    background-color: pink;
+    border-radius: 10px;
+    min-width: 20vw;
 }
 
-.grid-item span{
+.grid-item:nth-of-type(4n + 2) span{
     margin-top: 1vw;
     margin-left: 5%;
     width: 90%;
@@ -48,9 +66,35 @@
     overflow: hidden;
 }
 
+.grid-item:nth-of-type(4n + 1) span,
+.grid-item:nth-of-type(4n + 3) span,
+.grid-item:nth-of-type(4n + 4) span{
+    margin-top: 1vw;
+    font-family: 'StardewFont', sans-serif;
+    font-size: 2vw;
+    overflow: hidden;
+}
+.grid-item:nth-of-type(2n + 1) img{
+    width: 10vw;
+    height: 10vw;
+    border: 4px var(--brown) solid;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+
 .grid-item span img{
-    width: 2vw;
-    height: 2vw;
+    width: 1.4vw;
+    height: 1.4vw;
+    margin-left: 1vw;
+}
+
+.grid-item span::selection{
+    background-color: transparent;
+}
+
+.grid-item:hover{
+    cursor: url('../assets/images/selector3.png') 4 4, auto;
 }
 
 .marriageTrue::before,
@@ -77,4 +121,12 @@
 }
 #gift::before{
     content: "Most loved gift: ";
+}
+
+.loading{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    top: 200vw;
+    z-index: 200;
 }

@@ -44,7 +44,6 @@ function dropMoney() {
         money.src = "assets/images/gold.png";
     }
    
-
     const randomX = Math.random() * window.innerWidth;
     money.style.left = `${randomX}px`;
 

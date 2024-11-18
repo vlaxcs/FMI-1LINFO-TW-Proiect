@@ -5,7 +5,8 @@
     "address": "Pierre's General Store",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/d/d5/Fish_Taco.png/24px-Fish_Taco.png",
-    "lovedGift": "Fish Taco"
+    "lovedGift": "Fish Taco",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/8/87/Caroline.png"
   },
   "Clint": {
     "birthday": "Winter 26",
@@ -13,7 +14,8 @@
     "address": "Blacksmith",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/2e/Amethyst.png/24px-Amethyst.png",
-    "lovedGift": "Amethyst"
+    "lovedGift": "Amethyst",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/3/31/Clint.png"
   },
   "Demetrius": {
     "birthday": "Summer 19",
@@ -21,7 +23,8 @@
     "address": "24 Mountain Road",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/24/Bean_Hotpot.png/24px-Bean_Hotpot.png",
-    "lovedGift": "Bean Hotpot"
+    "lovedGift": "Bean Hotpot",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/f/f9/Demetrius.png"
   },
   "Dwarf": {
     "birthday": "Summer 22",
@@ -29,7 +32,8 @@
     "address": "Eastern Cave",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/2e/Amethyst.png/24px-Amethyst.png",
-    "lovedGift": "Amethyst"
+    "lovedGift": "Amethyst",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/e/ed/Dwarf.png"
   },
   "Evelyn": {
     "birthday": "Winter 20",
@@ -37,7 +41,8 @@
     "address": "1 River Road",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/a/a4/Beet.png/24px-Beet.png",
-    "lovedGift": "Beet"
+    "lovedGift": "Beet",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/8/8e/Evelyn.png"
   },
   "George": {
     "birthday": "Fall 24",
@@ -45,7 +50,8 @@
     "address": "1 River Road",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/4/4a/Fried_Mushroom.png/24px-Fried_Mushroom.png",
-    "lovedGift": "Fried Mushroom"
+    "lovedGift": "Fried Mushroom",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/7/78/George.png"
   },
   "Gus": {
     "birthday": "Summer 8",
@@ -53,7 +59,8 @@
     "address": "The Stardrop Saloon",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/e/ea/Diamond.png/24px-Diamond.png",
-    "lovedGift": "Diamond"
+    "lovedGift": "Diamond",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/5/52/Gus.png"
   },
   "Jas": {
     "birthday": "Summer 4",
@@ -61,7 +68,8 @@
     "address": "Marnie's Ranch",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/c/c0/Ancient_Doll.png/24px-Ancient_Doll.png",
-    "lovedGift": "Ancient Doll"
+    "lovedGift": "Ancient Doll",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/5/55/Jas.png"
   },
   "Jodi": {
     "birthday": "Fall 11",
@@ -69,7 +77,8 @@
     "address": "1 Willow Lane",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/8/87/Chocolate_Cake.png/24px-Chocolate_Cake.png",
-    "lovedGift": "Chocolate Cake"
+    "lovedGift": "Chocolate Cake",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/4/41/Jodi.png"
   },
   "Kent": {
     "birthday": "Spring 4",
@@ -77,7 +86,8 @@
     "address": "1 Willow Lane",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/2d/Fiddlehead_Risotto.png/24px-Fiddlehead_Risotto.png",
-    "lovedGift": "Fiddlehead Risotto"
+    "lovedGift": "Fiddlehead Risotto",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/9/99/Kent.png"
   },
   "Krobus": {
     "birthday": "Winter 1",
@@ -85,7 +95,8 @@
     "address": "Krobus' Shop",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/e/ea/Diamond.png/24px-Diamond.png",
-    "lovedGift": "Diamond"
+    "lovedGift": "Diamond",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/7/71/Krobus.png"
   },
   "Leo": {
     "birthday": "Summer 26",
@@ -93,7 +104,8 @@
     "address": "Hut (<6 ) Treehouse (≥6 )",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/f/f9/Duck_Feather.png/24px-Duck_Feather.png",
-    "lovedGift": "Duck Feather"
+    "lovedGift": "Duck Feather",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/1/1d/Leo.png"
   },
   "Lewis": {
     "birthday": "Spring 7",
@@ -101,7 +113,8 @@
     "address": "Mayor's Manor",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/f/f4/Autumn%27s_Bounty.png/24px-Autumn%27s_Bounty.png",
-    "lovedGift": "Autumn's Bounty"
+    "lovedGift": "Autumn's Bounty",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/2/2b/Lewis.png"
   },
   "Linus": {
     "birthday": "Winter 3",
@@ -109,7 +122,8 @@
     "address": "Tent",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/9/9b/Blueberry_Tart.png/24px-Blueberry_Tart.png",
-    "lovedGift": "Blueberry Tart"
+    "lovedGift": "Blueberry Tart",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/3/31/Linus.png"
   },
   "Marnie": {
     "birthday": "Fall 18",
@@ -117,7 +131,8 @@
     "address": "Marnie's Ranch",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/e/ea/Diamond.png/24px-Diamond.png",
-    "lovedGift": "Diamond"
+    "lovedGift": "Diamond",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/5/52/Marnie.png"
   },
   "Pam": {
     "birthday": "Spring 18",
@@ -125,7 +140,8 @@
     "address": "Trailer",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/b/b3/Beer.png/24px-Beer.png",
-    "lovedGift": "Beer"
+    "lovedGift": "Beer",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/d/da/Pam.png"
   },
   "Pierre": {
     "birthday": "Spring 26",
@@ -133,7 +149,8 @@
     "address": "Pierre's General Store",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/25/Fried_Calamari.png/24px-Fried_Calamari.png",
-    "lovedGift": "Fried Calamari"
+    "lovedGift": "Fried Calamari",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/7/7e/Pierre.png"
   },
   "Robin": {
     "birthday": "Fall 21",
@@ -141,7 +158,8 @@
     "address": "24 Mountain Road",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/c/c8/Goat_Cheese.png/24px-Goat_Cheese.png",
-    "lovedGift": "Goat Cheese"
+    "lovedGift": "Goat Cheese",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/1/1b/Robin.png"
   },
   "Sandy": {
     "birthday": "Fall 15",
@@ -149,7 +167,8 @@
     "address": "Oasis",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/2f/Crocus.png/24px-Crocus.png",
-    "lovedGift": "Crocus"
+    "lovedGift": "Crocus",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/4/4e/Sandy.png"
   },
   "Vincent": {
     "birthday": "Spring 10",
@@ -157,7 +176,8 @@
     "address": "1 Willow Lane",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/9/9d/Cranberry_Candy.png/24px-Cranberry_Candy.png",
-    "lovedGift": "Cranberry Candy"
+    "lovedGift": "Cranberry Candy",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/f/f1/Vincent.png"
   },
   "Willy": {
     "birthday": "Summer 24",
@@ -165,7 +185,8 @@
     "address": "Fish Shop",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/9/99/Catfish.png/24px-Catfish.png",
-    "lovedGift": "Catfish"
+    "lovedGift": "Catfish",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/8/82/Willy.png"
   },
   "Wizard": {
     "birthday": "Winter 17",
@@ -173,6 +194,7 @@
     "address": "Wizard's Tower",
     "marriageStatus": false,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/d/df/Book_of_Mysteries.png/24px-Book_of_Mysteries.png",
-    "lovedGift": "Book of Mysteries"
+    "lovedGift": "Book of Mysteries",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/c/c7/Wizard.png"
   }
 }

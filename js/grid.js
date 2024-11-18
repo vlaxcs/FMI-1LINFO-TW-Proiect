@@ -1,3 +1,4 @@
+let chindex = 0;
 let characters = [];
 let names = [];
 
@@ -49,38 +50,63 @@ async function AjaxNMCandidates() {
     }
 }
 
+function populate(chindex) {
+    let gridItem = document.querySelector('#grid-div');
+    const nameSpan = gridItem.querySelector('#name');
+    nameSpan.textContent = names[chindex];
+
+    gridItem = gridItem.nextElementSibling;
+    const birthdaySpan = gridItem.querySelector('#birthday');
+    birthdaySpan.textContent = characters[chindex].birthday;
+
+    const townSpan = gridItem.querySelector('#town');
+    townSpan.textContent = characters[chindex].livesIn;
+
+    const adressSpan = gridItem.querySelector('#address');
+    adressSpan.textContent = characters[chindex].address;
+
+    const marriageSpan = gridItem.querySelector('#marriage');
+
+    if (characters[chindex].marriageStatus) {
+        marriageSpan.className = 'marriageTrue';
+    } else {
+        marriageSpan.className = 'marriageFalse';
+    }
+
+    document.querySelector('#giftimage').src = characters[chindex].lovedGiftImgSrc;
+    document.querySelector('#profilepic').src = characters[chindex].profilePic;
+
+    const giftSpan = gridItem.querySelector("#gift span");
+    giftSpan.textContent = characters[chindex].lovedGift;
+}
+
+function increaseChindex() {
+    chindex++;
+    if (chindex >= characters.length) {
+        chindex = 0; // Reset to 0 if we go past the last character
+    }
+    populate(chindex);
+}
+
+async function eventButton(){
+    const nextButton = document.getElementById('nextbutton');
+    if (nextButton) {
+        nextButton.addEventListener('click', increaseChindex);
+    } else {
+        console.error('Next button not found');
+    }
+}
+
 async function main() {
     await AjaxBachelors();
     await AjaxBachelorettes();
     await AjaxNMCandidates();
+    await eventButton();
 
-    function populate() {
-        let chindex = 0;
-        let gridItem = document.querySelector('#grid-div');
-        const nameSpan = gridItem.querySelector('#name');
-        nameSpan.textContent = names[chindex];
-
-        gridItem = gridItem.nextElementSibling;
-        const birthdaySpan = gridItem.querySelector('#birthday');
-        birthdaySpan.textContent = characters[chindex].birthday;
-
-        const townSpan = gridItem.querySelector('#town');
-        townSpan.textContent = characters[chindex].livesIn;
-
-        const adressSpan = gridItem.querySelector('#address');
-        adressSpan.textContent = characters[chindex].address;
-
-        const marriageSpan = gridItem.quertSelector('#marriage');
-        if (characters[chindex]) 
-        {
-            gridItem.classList.add('marriageTrue');
-        }
-        else
-        {
-            gridItem.classList.add('marriageFalse');
-        } 
-    }
-    populate();
+    populate(0); // Populate with the first character initially
 }
 
-main();
+// Ensure the DOM is fully loaded before running the main function
+document.addEventListener('DOMContentLoaded', async () => {
+    await main();
+});

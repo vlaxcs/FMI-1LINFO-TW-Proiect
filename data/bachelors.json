@@ -5,7 +5,8 @@
     "address": "1 River Road",
     "marriageStatus": true,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/3/3d/Complete_Breakfast.png/24px-Complete_Breakfast.png",
-    "lovedGift": "Complete Breakfast"
+    "lovedGift": "Complete Breakfast",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/0/04/Alex.png"
   },
   "Elliott": {
     "birthday": "Fall 5",
@@ -13,7 +14,8 @@
     "address": "Elliott's Cabin",
     "marriageStatus": true,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/7/70/Crab_Cakes.png/24px-Crab_Cakes.png",
-    "lovedGift": "Crab Cakes"
+    "lovedGift": "Crab Cakes",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/b/bd/Elliott.png"
   },
   "Harvey": {
     "birthday": "Winter 14",
@@ -21,7 +23,8 @@
     "address": "Medical Clinic",
     "marriageStatus": true,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/e/e9/Coffee.png/24px-Coffee.png",
-    "lovedGift": "Coffee"
+    "lovedGift": "Coffee",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/9/95/Harvey.png"
   },
   "Sam": {
     "birthday": "Summer 17",
@@ -29,7 +32,8 @@
     "address": "1 Willow Lane",
     "marriageStatus": true,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/3/32/Cactus_Fruit.png/24px-Cactus_Fruit.png",
-    "lovedGift": "Cactus Fruit"
+    "lovedGift": "Cactus Fruit",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/9/94/Sam.png"
   },
   "Sebastian": {
     "birthday": "Winter 10",
@@ -37,7 +41,8 @@
     "address": "24 Mountain Road",
     "marriageStatus": true,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/2/23/Green_Frog_Egg.png/24px-Green_Frog_Egg.png",
-    "lovedGift": "Frog Egg"
+    "lovedGift": "Frog Egg",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/a/a8/Sebastian.png"
   },
   "Shane": {
     "birthday": "Spring 20",
@@ -45,6 +50,7 @@
     "address": "Marnie's Ranch",
     "marriageStatus": true,
     "lovedGiftImgSrc": "https://stardewvalleywiki.com/mediawiki/images/thumb/b/b3/Beer.png/24px-Beer.png",
-    "lovedGift": "Beer"
+    "lovedGift": "Beer",
+    "profilePic": "https://stardewvalleywiki.com/mediawiki/images/8/8b/Shane.png"
   }
 }

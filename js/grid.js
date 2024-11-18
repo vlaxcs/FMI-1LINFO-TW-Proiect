@@ -83,7 +83,7 @@ function populate(chindex) {
 function increaseChindex() {
     chindex++;
     if (chindex >= characters.length) {
-        chindex = 0; // Reset to 0 if we go past the last character
+        chindex = 0;
     }
     populate(chindex);
 }
@@ -103,10 +103,9 @@ async function main() {
     await AjaxNMCandidates();
     await eventButton();
 
-    populate(0); // Populate with the first character initially
+    populate(0);
 }
 
-// Ensure the DOM is fully loaded before running the main function
 document.addEventListener('DOMContentLoaded', async () => {
     await main();
 });

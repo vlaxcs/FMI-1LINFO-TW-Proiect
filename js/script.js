@@ -1,13 +1,16 @@
 const loadingFacts = [
     "You can visit Desert Calico!",
-    "Extra luck is variable, just watch TV!",
+    "Extra luck doesn't last forever, watch TV!",
     "Scarecrows are actually scaring crows!",
     "You can unlock the Greenhouse!",
     "The Community Center holds lots of secrets!",
     "There are many mysteries in holes!",
     "Garbage is surprisingly valuable!",
     "Slimes smile in your farm!",
-    "Museum is not a work of art, Gunther neither. At least, not now."
+    "Museum is not a work of art and Gunther is neither. At least, not yet.",
+    "You can carry up to 36 swords. Visit Pierre!",
+    "You should stay away from the blue concrete block.",
+    "Maru loves Battery Packs, Diamonds... and you ;)"
 ];
 
 window.onload = async function() {
@@ -157,13 +160,11 @@ window.onload = async function() {
         {
             audio.play();
             audioAlert.style.display = "flex";
-            console.log(style.display);
         }
         else if (String(style.display) == "flex")
         {
             audio.pause();
             audioAlert.style.display = "none";
-            console.log(style.display);
         }
 
     }
@@ -184,12 +185,11 @@ window.onload = async function() {
             while (changeInd == lastInd)
             {
                 changeInd = getRandomInt(0, 2);
-                console.log(changeInd, lastInd);
             }
-            console.log(changeInd, lastInd);
             lastInd = changeInd;
         }
-        else{
+        else
+        {
             changeInd = 2;
             flag = true;
         }
@@ -201,7 +201,7 @@ window.onload = async function() {
                 randomvalwidth = String(getRandomInt(3, 6)) + "vw";
                 randomvalheigth = String(getRandomInt(3, 6)) + "vw";
                 currentElement.style.setProperty('height', randomvalwidth);
-                currentElement.style.setProperty('width', randomheigth);
+                currentElement.style.setProperty('width', randomvalheigth);
                 break;
             case 1:
                 randomvaltop = String(getRandomInt(10, 150)) + "vh";
@@ -217,7 +217,7 @@ window.onload = async function() {
                 currentElement.style.setProperty('top', randomvaltop);
                 currentElement.style.setProperty('left', randomvalleft);
                 currentElement.style.setProperty('height', randomvalwidth);
-                currentElement.style.setProperty('width', randomheigth);
+                currentElement.style.setProperty('width', randomvalheigth);
                 break;
             }
     }

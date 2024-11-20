@@ -773,7 +773,7 @@ main>div>iframe{
 	z-index: 98;
 }
 .slime:hover{
-	cursor: url('/assets/images/grab.cur') 4 4, auto;
+	cursor: url('/assets/images/selector.png') 4 4, auto;
 }
 
 #slime{

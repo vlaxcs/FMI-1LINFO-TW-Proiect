@@ -84,8 +84,8 @@
 
 
 .grid-item span img{
-    width: 1.4vw;
-    height: 1.4vw;
+    width: 1.5vw;
+    height: 1.5vw;
     margin-left: 1vw;
 }
 
@@ -97,9 +97,24 @@
     cursor: url('../assets/images/selector3.png') 4 4, auto;
 }
 
-.marriageTrue::before,
+.marriageTrue::before{
+    content: '';
+    display: inline-block;
+    width: 1.6vw;
+    height: 1.6vw;
+    background-image: url('../assets/images/bouquet.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .marriageFalse::before{
-    content: "Marriage: ";
+    content: '';
+    display: inline-block;
+    width: 1.6vw;
+    height: 1.6vw;
+    background-image: url('../assets/images/icecream.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .marriageTrue::after{
@@ -121,12 +136,4 @@
 }
 #gift::before{
     content: "Most loved gift: ";
-}
-
-.loading{
-    position: absolute;
-    background-color: black;
-    width: 100%;
-    top: 200vw;
-    z-index: 200;
 }

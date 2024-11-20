@@ -1,15 +1,8 @@
-<!--
-
-+ Tranziție care să schimbe proprietăți la diferite intervale de timp (Aș vrea să fiu o galerie)(mi as dori sa nu mai fiti domnule tryhard, te rog )
-+ Soundtrack
-
--->
-
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
 	
-		<title>Meet the Pelican Town - Stardew Valley</title>
+		<title>In fact... Stardew Valley</title>
 		
 		<meta charset="utf-8">
 		<meta name="author" content="Vlad Minciunescu">
@@ -19,10 +12,9 @@
 		
 		<link rel="icon" href="../assets/images/logo.png" type="image/png">
 		<link rel="stylesheet" href="../css/style.css">
-		<link rel="stylesheet" href="../css/community.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-		<script src="../js/grid.js"></script>
+		<script src="../js/fact.js"></script>
 		<script src="../js/script.js"></script>
 	</head>
 	
@@ -40,26 +32,9 @@
 		</span>
 
 
-		<!-- Login button -->
-
-		<label for="login">
-			<span class="loginbutton">
-				<span>LOGIN :)</span>
-			</span>
-		</label>
-
-
-		<!-- Uninstall button #2 -->
-
-		<label for="uninstall">
-	
-			<span class="goofy" id="skema">
-				<span>UNINSTALL :(</span>
-			</span>
-
-		</label>
-
 		<!-- Expandable menu -->
+
+
 		<!-- Toggle Checkbox -->
 		<input type="checkbox" id="toggleMenu">
 
@@ -73,16 +48,16 @@
 		<!-- Header menu buttons outside of the label -->
 		<div class="hb">
 			<!-- Build your character (Menu button) -->
-			<a href="build.html" class="menuInsideItem"><p>Build your character</p></a>
-			<a href="build.html" class="menuItem">
+			<a href="../pages/build.html" class="menuInsideItem"><p>Build your character</p></a>
+			<a href="../pages/build.html" class="menuItem">
 				<img src="../assets/images/maru.png" alt="Build your character" class="build">
 			</a>
 
 
 			<!-- Pelican Town (Menu button) -->
-			<a href=" " class="menuInsideItem"><p>Meet Pelican Town</p></a>
-			<a href=" " class="menuItem">
-				<img src="../assets/images/community_center.png" alt="Meet Pelican Town" class="pelt" style="opacity: 1">
+			<a href="../pages/community.html" class="menuInsideItem"><p>Meet Pelican Town</p></a>
+			<a href="../pages/community.html" class="menuItem">
+				<img src="../assets/images/community_center.png" alt="Meet Pelican Town" class="pelt">
 			</a>
 
 
@@ -96,7 +71,6 @@
 		<main>
 
 			<!-- Clock -->
-
 			<div class="clock">
 				<div class="clockday">
 					<span id="cd"></span>
@@ -113,42 +87,16 @@
 				<img src="../assets/images/clock.png" alt="Stardew Valley Clock">
 			</div>
 
-			<div class="galerie">
-
-				<div class="grid-container">
-					
-					<div class="grid-item" id="grid-div">
-						<span><img src=" " alt=" " id="profilepic"></span>
-						<span id="name"></span>
-					</div>
-
-					<div class="grid-item" id="grid-div">
-						<span id="birthday"></span>
-						<span id="town"></span>
-						<span id="address"></span>
-						<span id="marriage"> Marriage: </span> <!--Schimba in clasa "marriageTrue sau False"-->
-						<span id="gift"><img src="" alt="Most loved gift" id="giftimage"><span></span></span>	
-					</div>
-					
-					<div class="grid-item">
-						<span>Add to favorites</span>
-					</div>
-
-					<div class="grid-item" id="nextbutton">
-						<span>Next character</span>
-					</div>
-
-				</div>
-				
-			</div>
-
-			<img src="/assets/images/greenslime.gif" alt="Slime" id="slime" class="slime">
+            <img src="/assets/images/greenslime.gif" alt="Slime" id="slime" class="slime">
 			
 			<audio id="audiopt" class="audiopt" src="/assets/sounds/pelicantown.mp3" controls></audio>
 			
 			<span class="audioalert" id="audioalert">
 				<span id="audiostatus">Sunet activat!</span>
 			</span>
+		
+
+		<!-- OpenAI Trained Model / Gunther -->
 
 		</main>
 
@@ -167,7 +115,6 @@
 					>
 				</a>
 			</div>	
-
 		</footer>
 
 	</body>

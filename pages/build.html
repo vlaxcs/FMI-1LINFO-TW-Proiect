@@ -15,6 +15,7 @@
 		<link rel="stylesheet" href="../css/build.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
+		<script src="../js/fact.js"></script>
 		<script src="../js/script.js"></script>
 	</head>
 	
@@ -24,6 +25,34 @@
 			<a href="../index.html"><img src="../assets/images/large_logo.png" alt="Stardew Valley logo"></a>
 		</header>
 	
+		<!-- Loading screen -->
+		<!-- Loading screen -->
+		<span class="loading">
+			<span>Did you know...</span>
+			<span id="loadingFact"><br></span>
+			<img src="../assets/images/arcade.png" alt="Loading screen">
+		</span>
+
+
+		<!-- Login button -->
+
+		<label for="login">
+			<span class="loginbutton">
+				<span>LOGIN</span>
+			</span>
+		</label>
+
+
+		<!-- Uninstall button #2 -->
+
+		<label for="uninstall">
+	
+			<span class="goofy" id="skema">
+				UNINSTALL :(
+			</span>
+
+		</label>
+
 		<!-- Expandable menu -->
 
 		<!-- Toggle Checkbox -->
@@ -70,7 +99,7 @@
 				</div>
 
 				<div class="counter">
-					<span id="count">0</span>
+					<span id="count"></span>
 				</div>
 
 				<img src="../assets/images/clock.png" alt="Stardew Valley Clock">
@@ -91,6 +120,15 @@
 				id="game_drop" 
 				>
 			</iframe>
+
+			<img src="/assets/images/greenslime.gif" alt="Slime" id="slime" class="slime">
+			
+			<audio id="audiopt" class="audiopt" src="/assets/sounds/pelicantown.mp3" controls></audio>
+			
+			<span class="audioalert" id="audioalert">
+				<span id="audiostatus">Sunet activat!</span>
+			</span>
+			
 		</main>
 
 		<footer>

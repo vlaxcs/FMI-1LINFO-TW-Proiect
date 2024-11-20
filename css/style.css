@@ -75,35 +75,55 @@ footer{
 	background-attachment: fixed;
 }
 
-.goofy{
+.goofy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    position: fixed;
+    top: 80vh;
+    left: 2%;
+    opacity: 1;
+    z-index: 10;
+    background-color: red;
+    color: white;
+    font-family: 'StardewFont', sans-serif;
+    font-size: 1vw;
+    padding: 1vw;
+    border: ridge 0.4vh rgb(255, 0, 0);
+    border-radius: 10px;
+    transition: left 0.1s ease;
+    width: 5.5vw;
+}
+
+.loginbutton{
 	position: fixed;
-	top: 80vh;
-	left: 2%;
-	opacity: 1;
-	z-index: 10;
-	background-color: transparent;
-	border: none;
-	width: 5.5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    top: 70vh;
+    left: 2%;
+    opacity: 1;
+    z-index: 10;
+    background-color: rgb(0, 190, 29);
+    color: white;
+    font-family: 'StardewFont', sans-serif;
+    font-size: 1vw;
+    padding: 1vw !important;
+    border: ridge 0.4vh rgb(0, 255, 4);
+    border-radius: 10px;
+    transition: left 0.1s ease;
+    width: 5.5vw !important;
 }
 
-.goofy{
-	font-family: 'StardewFont', sans-serif;
-	font-size: 1vw;
-	background-color: red;
-	color: white;
-	padding: 1vw;
-	border: ridge 0.4vh rgb(255, 0, 0);
-	border-radius: 10px;
-	transition: left 0.1s ease;
-}
-
-.goofy:hover{
+.goofy:hover,
+.loginbutton:hover{
 	left: 3%;
 	transition: left 0.1s ease;
 	cursor:url('../assets/images/shanecursor.png') 4 4, auto;
 }
 
-.goofy p::selection{
+.goofy p::selection,
+.loginbutton p::selection{
 	background-color: transparent;
 }
 
@@ -249,6 +269,28 @@ body img::selection{
 	opacity: 0.4;
 	rotate: 90deg;
 	transition: opacity 0.2s ease;
+	animation: dynamicMenu 5s linear infinite;
+	animation-delay: 3s;
+}
+
+@keyframes dynamicMenu{
+	0% {
+		transform: rotate(0deg);
+		width: 3vw;
+		height: 3vw;
+	}
+	20%{
+		transform: rotate(360deg);
+		top: 2.25vw;
+		width: 2.5vw;
+		height: 2.5vw;
+	}
+	100% {
+		transform: rotate(360deg);
+		top: 2vw;
+		width: 3vw;
+		height: 3vw;
+	}
 }
 
 .menu:hover + .menuDesc, .menu:hover, .build:hover, .pelt:hover, .darkview:hover{
@@ -641,13 +683,13 @@ main>div>iframe{
 	opacity: 0.8;
 	width: 10vw;
 	transform: translateX(30%);
-	transition: transform 0.1s ease, opacity 0.1s ease;
+	transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
 .CSSValid:hover{
 	opacity: 1;
 	transform: translateX(10%);
-	transition: transform 0.1s ease, opacity 0.1s ease;
+	transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
 @media only screen and (max-width: 700px) {
@@ -673,3 +715,89 @@ main>div>iframe{
 	}
 }
 
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71, 145, 255, 0.8);
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 10vw;
+    z-index: 1000;
+    visibility: visible;
+    opacity: 1;
+}
+
+.loading span{
+	font-family: 'StardewFont', sans-serif;
+	font-size: 2.5vw;
+	z-index: 1001;
+	color: white;
+	margin-bottom: 5vw;
+}
+
+.loading span::selection{
+	background-color: transparent;
+	color: white;
+}
+
+.loading img{
+	width: 10vw;
+	height: 10vw;
+	z-index: 1001;
+	margin-top: 2vw;
+	animation: loadingImg 1s linear infinite;
+}
+
+@keyframes loadingImg{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+.slime{
+	position: absolute;
+	top: 70vh;
+	left: 5vw;
+	width: 5vw;
+	height: 5vw;
+	opacity: 0;
+	z-index: 98;
+}
+.slime:hover{
+	cursor: url('/assets/images/grab.cur') 4 4, auto;
+}
+
+#slime{
+	transition: all 0.1s ease;
+}
+
+.audiopt{
+	display: none;
+}
+
+.audioalert{
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 45vh;
+	left: 2vw;
+	width: 10vw;
+	height: 2.5vw;
+	border: 4px var(--brown) ridge;
+	font-family: 'StardewFont', sans-serif;
+	font-size: 1.5vw;
+	border-radius: 1vw;
+	align-self: flex-end;
+	margin-left: auto;
+	background-image: linear-gradient(#ffd87f, #e7a160);
+}

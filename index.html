@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
+		<script src="js/fact.js"></script>
 		<script src="js/script.js"></script>
 	</head>
 	
@@ -23,6 +24,14 @@
 			<a href=" "><img src="assets/images/large_logo.png" alt="Stardew Valley logo"></a>
 		</header>
 	
+		<!-- Loading screen -->
+		<span class="loading">
+			<span>Did you know...</span>
+			<span id="loadingFact"><br></span>
+			<img src="./assets/images/arcade.png" alt="Loading screen">
+		</span>
+
+
 		<!-- Expandable menu -->
 
 
@@ -72,7 +81,7 @@
 				</div>
 
 				<div class="counter">
-					<span id="count">0</span>
+					<span id="count"></span>
 				</div>
 
 				<img src="assets/images/clock.png" alt="Stardew Valley Clock">
@@ -107,6 +116,14 @@
 				</div>
 			</div>
 
+
+			<!-- Install button -->
+
+			<a href="../pages/login.html">
+				<span class="loginbutton">
+					<span>LOGIN</span>
+				</span>
+			</a>
 
 			<!-- Uninstall button #2 -->
 
@@ -296,10 +313,19 @@
 					<a href="https://play.google.com/store/apps/details?id=com.chucklefish.stardewvalley&pli=1" target="_blank">
 						Android ($4.99)
 					</a>
-					!
+
 				</p>
 
 			</div>
+
+			<img src="/assets/images/greenslime.gif" alt="Slime" id="slime" class="slime">
+			
+			<audio id="audiopt" class="audiopt" src="/assets/sounds/pelicantown.mp3" controls></audio>
+			
+			<span class="audioalert" id="audioalert">
+				<span id="audiostatus">Sunet activat!</span>
+			</span>
+		
 
 		<!-- OpenAI Trained Model / Gunther -->
 

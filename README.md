@@ -2,7 +2,6 @@
 # AJAX
 > sesiuni: e.g. login/logout (folosind Storage / fișier json)
 # JAVASCRIPT
-> inputuri funcționale (de exemplu: input de tip text/range/number/radio/checkbox, select, textarea)
 > validarea datelor dintr-un formular folosind expresii regulate
 Se continuă login.html
 
@@ -12,7 +11,3 @@ Trebuie să verifice dacă a fost deja băgat în listă, iar dacă este în lis
 
 > folosirea proprietăților classList, target sau currentTarget
 Idk?
-
-> folosirea metodelor stopPropagation
-Idk?
-

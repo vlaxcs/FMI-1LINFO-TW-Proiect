@@ -1,14 +1,128 @@
 # Stardew Valley - Web Experience
-### Temă de laborator
-#### Universitatea din București
-#### Facultatea de Matematică și Informatică
-#### Licență ~ Informatică IF
-#### Tehnici Web ~ Semestrul I | Grupa 151
-#### Minciunescu Vlad
+## **Temă de laborator**
+- Universitatea din București
+- Facultatea de Matematică și Informatică
+- Licență ~ Informatică IF
+- Tehnici Web ~ Semestrul I ~ Grupa 151 > Minciunescu Vlad
+
+## **Conținut**
+
+1. [Despre proiect](#despre-proiect)
+2. [Facilități](#facilități)
+3. [Cum rulează?](#cum-rulează)
+4. [Utilizare](#utilizare)
+5. [Tehnologii utilizate](#tehnologii-utilizate)
+6. [Validare](#validare)
+7. [Informații administrative](#informații-administrative)
+
+## **Despre proiect**
+
+*Stardew Valley - Web Experience* este un mediu interactiv furnizat prin browser, care oferă o experință sumară a jocului propriu-zis.
+
+Utilizatorul poate experimenta comportamente ale anumitor entități din joc, aspectul și dinamica generată în User Interface și câteva noțiuni despre povestea jocului Stardew Valley.
+
+Proiectul este destinat aprofundării tehnicilor generale de generare a conținutului prin intermediul paginilor WEB și de manipulare a interacțiunilor utilizatorilor cu diferite obiecte.
+
+### Motivarea alegerii temei
+
+*Stardew Valley* este unul dintre jocurile care m-au apropiat de tematica pixel-art prin aspectul unic pe care îl pune la dispoziție. Stilul de joc este unul care mi se potrivește, care garantează o experiență unică de joc. Progresul se justifică prin calitatea relaționării cu celelalte caractere, prin evoluția financiară și materială și prin deblocarea anumitor facilități. În plus, pune la dispoziție un mediu de joc multiplayer, în timp real.
+
+Paginile web asociate jocului m-au impresionat prin acuratețea maximă prin care prezintă informații relevante despre orice aspect legat de gameplay și povestea jocului.
 
 
 
-Acest proiect nu include conținut generat cu ajutorul inteligenței artificiale.
 
-# AJAX
-> sesiuni: e.g. login/logout (folosind Storage / fișier json)
+## **Facilități**
+
+- 📝 **Mesaje informaționale dinamice**: Afișează informații de interes despre gameplay.
+- 🍙 **Slime interactiv**: Un mob care simulează comportamentul din joc în timpul unei lupte.
+- 🔊 **Comutator pentru conținut audio și meniu**: Cu ajutorul tastelor, putem interacționa manipula funcționalitatea website-ului.
+- 👨‍💼 **Sistem de conturi**: Un sistem de conturi care ține minte detalii despre utilizator, precum credențiale criptate, o listă de caractere preferate și numărul de interacțiuni pe care le-a avut pe site.
+- 🌟**Surprize**: Odată cu interacțiunile, vor apărea obiecte corespunzătoare tipului acesteia.
+- 🎨 **Generator de avatare**: Un mic sistem prin care poate fi creat un avatar specific dorințelor utilizatorului[^1].
+- 🏘 **Clasar al caracterelor din joc**: O mică galerie care preia conținut de pe wiki-ul oficial al Stardew Valley[^2].
+- 😎 **Easter Eggs**: Descoperiți-le!
+
+## **Cum rulează?**
+
+### Hai să începem!
+
+Pentru a rula acest website, avem nevoie de:
+- un browser
+- [VSCode](https://code.visualstudio.com/) (sau orice alt editor de text)
+- [Node.JS](https://nodejs.org/en)
+
+### Instalare (Windows)
+
+1. Instalați Node.JS (opțional, dacă îl aveți, săriți peste)
+```bash
+  winget install Schniz.fnm
+  fnm env --use-on-cd | Out-String | Invoke-Expression
+  fnm use --install-if-missing 22
+  node -v
+  npm -v
+```
+2. Clonați repozitoriul
+```bash
+   git clone https://github.com/vlaxcs/FMI-1LINFO-TW-Proiect.git
+   cd FMI-1LINFO-TW-Proiect
+```
+3. Rulați server.js din locația root (directorul ce poartă numele proiectului)
+```bash
+   node server.js
+```
+4. Din browser, accesați [localhost:3000](http://localhost:3000/)
+
+## **Utilizare**
+
+### **Butoane de acțiune**
+
+| Cheie   | Acțiune                                             |
+|---------|-----------------------------------------------------|
+| 'P'     | Pornește/oprește soundtrack-ul jocului
+| 'M'     | Afișează/ascunde meniul expandabil
+| 'Click' | Generează obiecte și influențează contorul din ceas
+
+### **Management-ul conturilor**
+
+- **Înregistrarea unui cont:**
+
+  La momentul înregistrării, se verifică posibilitatea existenței unui cont căruia să-i corespundă deja aceleași credențiale (caută după numele de utilizator și adresa de email).
+  Parola trebuie să îndeplinească niște condiții minimale de securitate, anume să conțină caractere de tip literă mare, literă mică, cifră, caractere speciale și o lungime rezonabilă.
+  Ulterior, parolele sunt stocate în sistem, folosind algoritmul de criptare SHA-256.
+
+- **Conectarea la contul existent:**
+
+  Atunci când utilizatorul încearcă să se conecteze, există trei posibilități:
+    - Contul utilizatorului nu există, deci trebuie să modifice anumite date de intrare
+    - Utilizatorul greșește parola, deci trebuie să revizuiască textul introdus
+    - Contul utilizatorului există și se creează o sesiune nouă, prin intermediul unui script AJAX.
+
+## **Tehnologii utilizate**
+- HTML5: Structura paginii web.
+- CSS3: Modelare vizuală, animații și tranziții.
+- JavaScript: Manipularea DOM-ului, interacțiuni, configurarea server-ului și management-ul datelor stocate pe acesta 🍪.
+
+## **Validare**
+- Structura arborescentă a documentului în care este salvat proiectul permite navigarea cu ușurință printre componentele acestuia.
+- Proiectul respectă standardele industriale de validare HTML în proporție de 98% din cauza unei erori minimale de exprimare, comisă de implementatorului de conținut embedded pentru widget-ul de accesare a unui joc pe Steam (don't blame them). 
+- Conținutul CSS respectă standardele impuse.
+- Conținutul JavaScript nu generează erori semnificative, care să afecteze experiența utilizatorului.
+
+Calitatea conținutul a fost verificată prin:
+- [HTML Validator](https://validator.w3.org/)
+- [CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+## 2doList()
+
+a) sesiuni: e.g. login/logout (folosind Storage / fișier json) (AJAX)
+
+## **Informații administrative**
+- Acest proiect nu include conținut generat cu ajutorul inteligenței artificiale
+- Timp de lucru: 60 de ore
+- Informație acumulată: pow(2, 1000) bits
+- Doamna profesoară încântată: Să sperăm ❤
+
+#### Notă de subsol
+[^1]: [Stardew Valley Unofficial Avatar Builder](https://jazzybee.itch.io/sdvcharactercreator)
+[^2]: [Stardew Valley Official Wiki](https://stardewvalleywiki.com/Stardew_Valley_Wiki)

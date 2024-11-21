@@ -104,7 +104,6 @@ async function fetchVillagerInfo() {
             console.error('No data received from Wiki Stardew Valley in Non-Marriage Candidates!', error);
         }
     }
-
     
     const mascontent = JSON.stringify(Bachelors, null, 2);
     fs.writeFileSync('../data/bachelors.json', mascontent, 'utf-8');

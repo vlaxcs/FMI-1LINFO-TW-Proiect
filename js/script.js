@@ -69,6 +69,7 @@ window.onload = async function() {
         if (hour >= 12) {
             if (hour > 12) {
                 hour = hour % 12;
+                timeFormat = "pm";
             }
         }
         minutes = minutes < 10 ? '0' + minutes : minutes;
@@ -179,7 +180,6 @@ window.onload = async function() {
     let lastInd = 0;
     let flag = false;
     function updateSlime(currentElement){
-        const elementStyles = window.getComputedStyle(currentElement);
         let changeInd = getRandomInt(0, 2); 
         if (flag != true){
             while (changeInd == lastInd)
@@ -226,4 +226,193 @@ window.onload = async function() {
     slimeElement.addEventListener("click", function(){
         updateSlime(slimeElement);
     });
-};
+
+    let logButton = document.getElementById("old");
+    let regButton = document.getElementById("new");
+
+    if (regButton) {
+        regButton.addEventListener('click', (event) => {
+            console.log("New user announced!");
+            event.stopPropagation();
+            const modButton = document.querySelector('.validate');
+            if (modButton) {
+                modButton.classList.add("register");
+                modButton.classList.remove("validate");
+                modButton.id = "register";
+                modButton.innerHTML = "REGISTER";
+            } else {
+                console.warn("No button with the class 'validate' found!");
+            }
+        });
+    } else {
+        console.log("Is not a new user!");
+    }
+
+    if (logButton) {
+        logButton.addEventListener('click', (event) => {
+            console.log("Old user found!");
+            event.stopPropagation();
+            const modButton = document.querySelector('.register');
+            if (modButton) {
+                modButton.classList.add("validate");
+                modButton.classList.remove("register");
+                modButton.id = "login";
+                modButton.innerHTML = "LOGIN";
+            } else {
+                console.warn("No button with the class 'register' found!");
+            }
+        });
+    } else {
+        console.log("Is not an old user!");
+    }
+
+    async function hashPassword(password) 
+    {
+        const encoder = new TextEncoder();
+        const data = encoder.encode(password);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+        return Array.from(new Uint8Array(hashBuffer))
+            .map(b => b.toString(16).padStart(2, '0'))
+            .join('');
+    }
+
+    async function addAccount(username, email, password) {
+        let accounts = JSON.parse(localStorage.getItem('accounts'));
+        accounts[username] = { email: email, password: password };
+        localStorage.setItem('accounts', JSON.stringify(accounts));
+        console.log("Added!");
+    }
+
+    const login = document.getElementById("login");
+    if (login != null) {
+        login.addEventListener('click', async (event) => {
+            event.preventDefault();
+
+            if (!localStorage.getItem('accounts')) {
+                localStorage.setItem('accounts', JSON.stringify({}));
+            }
+
+            if (login.id === "register") {
+                await register();
+            } else if (login.id === "login") {
+                await loginAccount(username, email, password);
+            } else {
+                alert(login.id + " button clicked!");
+            }
+        });
+    }
+
+    async function checkMail(mail) {
+        if (mail.includes("@") && mail.length >= 12) 
+        {
+            return true;
+        }
+        return false;
+    }
+    
+    async function checkFields(username, email, password) {
+        if (username.trim() === "" || email.trim() === "" || password.trim() === "") {
+            return false;
+        }
+        return true;
+    }
+
+    async function checkPass(password){
+        const minLength = 8;
+        const hasUppercase = /[A-Z]/.test(password);
+        const hasLowercase = /[a-z]/.test(password);
+        const hasNumber = /[0-9]/.test(password);
+        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+        
+        if (password.length < minLength || !hasLowercase || !hasUppercase || !hasNumber || !hasSpecialChar)
+        {
+            alert("Your password should have at least: 8 characters, uppercase and lowercase characters, 1 digits and a special character (ex: !@#)");
+            return false;
+        }
+        return true;
+    }
+
+    async function register() {
+
+        let username = document.getElementById("username").value.trim().toLowerCase();
+        const password = document.getElementById("password").value.trim();
+        let email = document.getElementById("email").value.trim().toLowerCase();
+
+        const hashedPassword = await hashPassword(password);
+        console.log("Hashed Password:", hashedPassword);
+
+        validData = await checkFields(username, email, password);
+        if (!validData)
+        {
+            alert("You must complete all fields!");
+            return;
+        }
+
+        validMail = await checkMail(email);
+        if (!validMail)
+        {
+            alert("Your email account should be 12 or more characters long and include @");
+            return;
+        }
+
+        validPassword = await checkPass(password);
+        if (!validPassword)
+        {
+            alert("Your password is weak! Try another one!");
+            return;
+        }
+
+        let accounts = JSON.parse(localStorage.getItem('accounts'));
+        if (accounts[username]) {
+            alert("Sorry! There is another account registered with this username!");
+            console.log(accounts);
+            return;
+        }
+        else if (Object.values(accounts).some(acc => acc.email === email)) {
+            alert("Sorry! There is another account registered with this email address!");
+            console.log(accounts);
+            return;
+        }
+
+        await addAccount(username, email, hashedPassword);
+        alert("Your account is now registered. You can sign in!");
+        console.log(accounts);
+        }
+
+        async function loginAccount(username, email, password){
+            let accounts = JSON.parse(localStorage.getItem('accounts'));
+            username = username.value;
+            email = email.value;
+            password = password.value;
+            validData = await checkFields(username, email, password);
+            if (!validData)
+            {
+                alert("You must complete all fields!");
+                return;
+            }    
+
+            const hashedPassword = await hashPassword(password);
+            if (!accounts[username])
+            {
+                alert("Account with this username doesn't exist!");
+                return;
+            }
+            if (accounts[username] && accounts[username].email != email)
+            {
+                alert("This account is not registered with your input email!");
+                return;
+            }
+            if (accounts[username] && accounts[username].email == email && accounts[username].password != hashedPassword)
+            {
+                alert("All good, except the password!");
+                return;
+            }
+            if (accounts[username] && accounts[username].email == email && accounts[username].password == hashedPassword)
+            {
+                console.log(accounts[username].email);
+                alert("This account exists!");
+                return;
+            }
+            alert("This account is not registered!");
+        }
+}

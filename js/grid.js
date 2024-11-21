@@ -55,7 +55,7 @@ function populate(chindex) {
     const nameSpan = gridItem.querySelector('#name');
     nameSpan.textContent = names[chindex];
 
-    gridItem = gridItem.nextElementSibling;
+    gridItem = document.querySelector('#grid-div2');
     const birthdaySpan = gridItem.querySelector('#birthday');
     birthdaySpan.textContent = characters[chindex].birthday;
 

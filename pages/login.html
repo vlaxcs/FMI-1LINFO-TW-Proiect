@@ -12,6 +12,7 @@
 		
 		<link rel="icon" href="../assets/images/logo.png" type="image/png">
 		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/login.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 		<script src="../js/script.js"></script>
@@ -94,6 +95,33 @@
 				<span id="audiostatus">Sunet activat!</span>
 			</span>
 		
+			<!-- Login -->
+				<form id ="loginform">
+					<span>
+					<label for="username">USERNAME</label>
+					<input type="text" id="username" name="username" placeholder="Enter your usermame" autocomplete="username" required>
+					</span>
+
+					<span>
+					<label for="email">EMAIL</label>
+					<input type="text" id="email" name="email" placeholder="Enter your email adress" required>
+					</span>
+
+					<span>
+					<label for="password">PASSWORD</label>
+					<input type="password" id="password" name="password" placeholder="Password, at least 8 characters" autocomplete="current-password" required>
+					</span>
+					
+					<span>
+					<label for="new">First time on Stardew Valley?</label>
+					Yes<input type="radio" id="new" name="checkUser" value="yes" required>
+					No<input type="radio" id="old" name="checkUser" value="no" required>
+					</span>
+
+					<span>
+					<button id="login" class="validate">LOGIN</button>
+					</span>
+				</form>
 
 		<!-- OpenAI Trained Model / Gunther -->
 

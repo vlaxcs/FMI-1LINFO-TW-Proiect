@@ -50,7 +50,7 @@ header img:hover{
 
 header{
 	position: absolute;
-	width: 100vw;
+	width: 100%;
 	height: 7vw;
 	top: 0vw;
 	left: 0vw;
@@ -267,7 +267,7 @@ body img::selection{
 	position: absolute;
 	right: 2vw;
 	opacity: 0.4;
-	rotate: 90deg;
+	transform: rotate(90deg);
 	transition: opacity 0.2s ease;
 	animation: dynamicMenu 5s linear infinite;
 	animation-delay: 3s;
@@ -275,18 +275,18 @@ body img::selection{
 
 @keyframes dynamicMenu{
 	0% {
-		transform: rotate(0deg);
+		transform: rotate(90deg);
 		width: 3vw;
 		height: 3vw;
 	}
 	20%{
-		transform: rotate(360deg);
+		transform: rotate(450deg);
 		top: 2.25vw;
 		width: 2.5vw;
 		height: 2.5vw;
 	}
 	100% {
-		transform: rotate(360deg);
+		transform: rotate(450deg);
 		top: 2vw;
 		width: 3vw;
 		height: 3vw;
@@ -627,8 +627,8 @@ main>div>iframe{
     align-items: center;
 	padding-bottom: 2vw;
 	padding-top: 2vw;
-	width: 100;
-	height: 190;
+	width: 100%;
+	height: 190%;
 }
 
 .buywidget{

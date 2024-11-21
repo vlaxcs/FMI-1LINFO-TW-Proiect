@@ -88,7 +88,7 @@ Pentru a rula acest website, avem nevoie de:
 - **Înregistrarea unui cont:**
 
   La momentul înregistrării, se verifică posibilitatea existenței unui cont căruia să-i corespundă deja aceleași credențiale (caută după numele de utilizator și adresa de email).
-  Parola trebuie să îndeplinească niște condiții minimale de securitate, anume să conțină caractere de tip literă mare, literă mică, cifră, caractere speciale și o lungime rezonabilă.
+  Parola trebuie să îndeplinească niște condiții minimale de securitate, anume *să conțină caractere de tip literă mare, literă mică, cifră, caractere speciale și o lungime rezonabilă*.
   Ulterior, parolele sunt stocate în sistem, folosind algoritmul de criptare SHA-256.
 
 - **Conectarea la contul existent:**

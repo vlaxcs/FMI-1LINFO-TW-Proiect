@@ -21,6 +21,7 @@
     }
     .grid-container:nth-of-type(2n){
         grid-template-columns: 50%;
+        margin: 0rem 5rem 1rem 5rem;
     }
 }
 
@@ -55,6 +56,11 @@
     background-color: pink;
     border-radius: 10px;
     min-width: 20vw;
+}
+.grid-item:nth-of-type(4n + 3):hover,
+.grid-item:nth-of-type(4n + 4):hover{
+    background-color: rgb(223, 159, 181);
+    cursor: url('../assets/images/diamond.png') 4 4, auto;
 }
 
 .grid-item:nth-of-type(4n + 2) span{
@@ -136,4 +142,8 @@
 }
 #gift::before{
     content: "Most loved gift: ";
+}
+
+.clock{
+    top: 2vw;
 }

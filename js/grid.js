@@ -50,23 +50,10 @@ async function AjaxNMCandidates() {
     }
 }
 
-function populate(chindex) {
-    let gridItem = document.querySelector('#grid-div');
-    const nameSpan = gridItem.querySelector('#name');
-    nameSpan.textContent = names[chindex];
-
-    gridItem = document.querySelector('#grid-div2');
-    const birthdaySpan = gridItem.querySelector('#birthday');
+async function updateGrid(nameSpan, birthdaySpan, townSpan, adressSpan, marriageSpan, giftSpan){
     birthdaySpan.textContent = characters[chindex].birthday;
-
-    const townSpan = gridItem.querySelector('#town');
     townSpan.textContent = characters[chindex].livesIn;
-
-    const adressSpan = gridItem.querySelector('#address');
     adressSpan.textContent = characters[chindex].address;
-
-    const marriageSpan = gridItem.querySelector('#marriage');
-
     if (characters[chindex].marriageStatus) {
         marriageSpan.className = 'marriageTrue';
     } else {
@@ -74,18 +61,30 @@ function populate(chindex) {
     }
 
     document.querySelector('#giftimage').src = characters[chindex].lovedGiftImgSrc;
-    document.querySelector('#profilepic').src = characters[chindex].profilePic;
-
-    const giftSpan = gridItem.querySelector("#gift span");
     giftSpan.textContent = characters[chindex].lovedGift;
 }
 
-function increaseChindex() {
+function populate(chindex) {
+    let gridItem = document.querySelector('#grid-div');
+    const nameSpan = gridItem.querySelector('#name');
+    document.querySelector('#profilepic').src = characters[chindex].profilePic;
+    nameSpan.textContent = names[chindex];
+    
+    gridItem = document.querySelector('#grid-div2');
+    const birthdaySpan = gridItem.querySelector('#birthday');
+    const townSpan = gridItem.querySelector('#town');
+    const adressSpan = gridItem.querySelector('#address');
+    const marriageSpan = gridItem.querySelector('#marriage');
+    const giftSpan = gridItem.querySelector("#gift span");
+    updateGrid(nameSpan, birthdaySpan, townSpan, adressSpan, marriageSpan, giftSpan);
+}
+
+async function increaseChindex() {
     chindex++;
     if (chindex >= characters.length) {
         chindex = 0;
     }
-    populate(chindex);
+    await populate(chindex);
 }
 
 async function eventButton(){

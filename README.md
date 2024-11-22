@@ -40,7 +40,7 @@ Paginile web asociate jocului m-au impresionat prin acuratețea maximă prin car
 - 👨‍💼 **Sistem de conturi**: Un sistem de conturi care ține minte detalii despre utilizator, precum credențiale criptate, o listă de caractere preferate și numărul de interacțiuni pe care le-a avut pe site.
 - 🌟**Surprize**: Odată cu interacțiunile, vor apărea obiecte corespunzătoare tipului acesteia.
 - 🎨 **Generator de avatare**: Un mic sistem prin care poate fi creat un avatar specific dorințelor utilizatorului[^1].
-- 🏘 **Clasar al caracterelor din joc**: O mică galerie care preia conținut de pe wiki-ul oficial al Stardew Valley[^2].
+- 🏘 **Galerie a caracterelor din joc**: O mică galerie care preia conținut de pe wiki-ul oficial al Stardew Valley[^2].
 - 😎 **Easter Eggs**: Descoperiți-le!
 
 ## **Cum rulează?**

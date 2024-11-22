@@ -67,11 +67,13 @@ Pentru a rula acest website, avem nevoie de:
    git clone https://github.com/vlaxcs/FMI-1LINFO-TW-Proiect.git
    cd FMI-1LINFO-TW-Proiect
 ```
-3. Rulați server.js din locația root (directorul ce poartă numele proiectului)
+3. Deschideți Windows PowerShell cu drepturi de administrator.
+
+4. Rulați server.js din locația root (directorul ce poartă numele proiectului)
 ```bash
    node server.js
 ```
-4. Din browser, accesați [localhost:3000](http://localhost:3000/)
+5. Din browser, accesați [localhost:3000](http://localhost:3000/)
 
 ## **Utilizare**
 

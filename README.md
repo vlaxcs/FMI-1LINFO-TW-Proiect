@@ -73,7 +73,7 @@ Pentru a rula acest website, avem nevoie de:
 ```bash
    node server.js
 ```
-5. Din browser, accesați [localhost:3000](http://localhost:3000/)
+5. Din browser, accesați [localhost:3000](http://localhost:3000/). Nu sunt suportate extensiile, deci vă recomand să folosiți modul icognito.
 
 ## **Utilizare**
 

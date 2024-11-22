@@ -49,7 +49,6 @@ Paginile web asociate jocului m-au impresionat prin acuratețea maximă prin car
 
 Pentru a rula acest website, avem nevoie de:
 - un browser
-- [VSCode](https://code.visualstudio.com/) (sau orice alt editor de text)
 - [Node.JS](https://nodejs.org/en)
 
 ### Instalare (Windows)

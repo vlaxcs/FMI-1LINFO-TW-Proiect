@@ -120,6 +120,8 @@ a) sesiuni: e.g. login/logout (folosind Storage / fișier json) (AJAX)
 ## **Informații administrative**
 - Acest proiect nu include conținut generat cu ajutorul inteligenței artificiale
 - Timp de lucru: 60 de ore
+- Testat pe <Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+2, Win32, Icognito (fără extensii)>
 - Informație acumulată: pow(2, 1000) bits
 - Doamna profesoară încântată: Să sperăm ❤
 

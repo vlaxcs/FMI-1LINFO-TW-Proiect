@@ -67,7 +67,7 @@ Pentru a rula acest website, avem nevoie de:
    git clone https://github.com/vlaxcs/FMI-1LINFO-TW-Proiect.git
    cd FMI-1LINFO-TW-Proiect
 ```
-3. Deschideți Windows PowerShell cu drepturi de administrator.
+3. Deschideți Windows PowerShell cu drepturi de administrator și mențineți-l deschis chiar și în timp ce utilizați site-ul.
 
 4. Rulați server.js din locația root (directorul ce poartă numele proiectului)
 ```bash

@@ -517,7 +517,7 @@ main>div>iframe{
 	width: 70%;
 	padding-left: 1vw;
 	padding-right: 1vw;
-	font-family: 'StardewFont';
+	font-family: 'StardewFont', sans-serif;
 	margin-top: 1vw;
 	margin-left: 15%;
 	margin-bottom: 2vw;

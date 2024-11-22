@@ -71,18 +71,19 @@
     color: white;
 }
 
+.validate:hover{
+    cursor: url('../assets/images/selector2.png') 4 4, auto;
+    background-color: rgb(1, 164, 26);
+}
+
 .register{
     background-color: red;
     border: 0.4vh rgb(211, 0, 0) ridge;
 }
-.validate:hover{
+
+.register:hover{
     cursor: url('../assets/images/selector2.png') 4 4, auto;
     background-color: rgb(164, 1, 1);
-}
-
-.validate:hover{
-    cursor: url('../assets/images/selector2.png') 4 4, auto;
-    background-color: rgb(1, 164, 26);
 }
 
 .validate::selection,

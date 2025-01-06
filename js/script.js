@@ -1,18 +1,33 @@
 // Random facts during loadingScreen()
-const loadingFacts = [
-    "You can visit Desert Calico!",
-    "Extra luck doesn't last forever, watch TV!",
-    "Scarecrows are actually scaring crows!",
-    "You can unlock the Greenhouse!",
-    "The Community Center holds lots of secrets!",
-    "There are many mysteries in holes!",
-    "Garbage is surprisingly valuable!",
-    "Slimes smile in your farm!",
-    "Museum is not a work of art and Gunther is neither. At least, not yet.",
-    "You can carry up to 36 swords. Visit Pierre!",
-    "You should stay away from the blue concrete block.",
-    "Maru loves Battery Packs, Diamonds... and you ;)"
-];
+const loadingFacts = {
+    "en": [
+        "You can visit Desert Calico!",
+        "Extra luck doesn't last forever, watch TV!",
+        "Scarecrows are actually scaring crows!",
+        "You can unlock the Greenhouse!",
+        "The Community Center holds lots of secrets!",
+        "There are many mysteries in holes!",
+        "Garbage is surprisingly valuable!",
+        "Slimes smile in your farm!",
+        "Museum is not a work of art and Gunther is neither. At least, not yet.",
+        "You can carry up to 36 swords. Visit Pierre!",
+        "You should stay away from the blue concrete block.",
+        "Maru loves Battery Packs, Diamonds... and you ;)"],
+    "ro": [
+        "Poti vizita Desertul Calico!",
+        "Norocul extra nu dureaza la infinit, uita-te la TV!",
+        "Sperietorile chiar sperie ciorile!",
+        "Poti debloca sera! Incearca :)",
+        "Centrul Comunitatii ascunde multe secrete!",
+        "Sunt multe mistere in gauri!",
+        "Gunoiul este surprinzator de valoros!",
+        "Slime-urile zambesc in ferma ta!",
+        "Muzeul nu este o lucrare de arta si Gunther nu este nici el. Cel putin nu inca.",
+        "Poti purta pana la 36 de sabii. Viziteaza-l pe Pierre!",
+        "Ar trebui sa te feresti de blocul de beton albastru.",
+        "Maru iubeste Pachetele de Baterii, Diamantele... si pe tine ;)"
+    ]
+};
 
 // ===== Utility Functions =====
 // Generates a random value into an interval
@@ -22,14 +37,15 @@ function getRandomInt(min, max){
 
 // Updates the fact in loading screen
 async function updateFact(factIndex) {
+    const lang = "ro";
     const fact = document.getElementById("loadingFact");
 
-    newIndex = getRandomInt(0, loadingFacts.length - 1);
+    newIndex = getRandomInt(0, loadingFacts[lang].length - 1);
     while (factIndex == newIndex){
-        newIndex = getRandomInt(0, loadingFacts.length - 1);
+        newIndex = getRandomInt(0, loadingFacts[lang].length - 1);
     }
     factIndex = newIndex;
-    fact.innerHTML = loadingFacts[newIndex];
+    fact.innerHTML = loadingFacts[lang][newIndex];
 
     await new Promise(resolve => setTimeout(resolve, 2000));
 }
@@ -76,9 +92,12 @@ function upDateTime() {
 
 // Update the counter
 async function updateCounter(counter){
-    if(localStorage.count === undefined)
-        {
-            localStorage.count = 0;
+    const currentSession = JSON.parse(sessionStorage.getItem("currentUser"));
+    if(sessionStorage.getItem("currentUser") == null) {
+        counter.innerHTML = "Login!";
+    }
+    else if(currentSession.count == null) {
+            currentSession.count = 0;
         }
     counter.innerHTML = "Click!";
 }
@@ -250,6 +269,10 @@ async function register() {
 
     await addAccount(username, email, hashedPassword);
     alert("Your account is now registered. You can sign in!");
+
+    setTimeout(function() {
+        window.location.reload();
+    }, 500);
 }
 
 // Tries to login into an account, without starting the AJAX session
@@ -283,7 +306,13 @@ async function loginAccount(username, email, password){
     }
     if (accounts[username] && accounts[username].email == email && accounts[username].password == hashedPassword)
     {
-        alert("This account exists!");
+        count = accounts[username].count;
+        sessionStorage.setItem("currentUser", JSON.stringify({username, email, count}));
+        alert("Welcome, " + username + "!");
+
+        setTimeout(function() {
+            window.location.href = '/';
+        }, 500);
         return;
     }
     alert("This account is not registered!");
@@ -303,7 +332,7 @@ async function hashPassword(password)
 // Function to set a new account into localStorage
 async function addAccount(username, email, password) {
     let accounts = JSON.parse(localStorage.getItem('accounts'));
-    accounts[username] = { email: email, password: password };
+    accounts[username] = { email: email, password: password, count: null };
     localStorage.setItem('accounts', JSON.stringify(accounts));
 }
 
@@ -339,20 +368,129 @@ async function checkPass(password){
     return true;
 }
 
+// Ends current session
+async function endSession(){
+    sessionStorage.clear();
+    setTimeout(function() {
+        alert("Successfully logged out!");
+        window.location.reload();
+    }, 500);
+    return;
+}
+
+function updateForm(){
+    const currentSession = JSON.parse(sessionStorage.getItem("currentUser"));
+    if (currentSession != null){
+        form = document.getElementById("loginform");
+        if (form){
+            var spans = form.getElementsByTagName("span");
+            for (var i = 0; i < spans.length - 1; i++){
+                spans[i].style.display = "none";
+            }
+            spans[i].classList.add("logoutspan");
+        }
+        modButton = document.querySelector('.validate');
+        if (modButton) {
+            modButton.classList.add("logout");
+            modButton.classList.remove("validate");
+            modButton.id = "logout";
+            modButton.innerHTML = "LOGOUT";
+        }
+        modButton = document.querySelector('.register');
+        if (modButton) {
+            modButton.classList.add("logout");
+            modButton.classList.remove("register");
+            modButton.id = "logout";
+            modButton.innerHTML = "LOGOUT";
+        }
+    }
+}
+
+async function updateTitle(lang, documentName, translates){
+    if (documentName === "index.html"){
+        const title = document.getElementsByTagName("title")[0];
+        title.innerHTML = translates[lang]["pageTitle"][0];
+    }
+    if (documentName === "build.html"){
+         const title = document.getElementsByTagName("title")[0];
+         title.innerHTML = translates[lang]["pageTitle"][1];
+    }
+    if (documentName === "community.html"){
+        const title = document.getElementsByTagName("title")[0];
+        title.innerHTML = translates[lang]["pageTitle"][2];
+    }
+    if (documentName === "login.html"){
+        const title = document.getElementsByTagName("title")[0];
+        title.innerHTML = translates[lang]["pageTitle"][3];
+    }
+}
+
+async function fetchContent(){
+    let translates;
+    fetch('../content/translates.json') // Path to the JSON file
+    .then(response => {
+        return response.json();
+    })
+    .then(jsonData => {
+        translates = jsonData;
+        updateContent();
+    });
+
+    async function updateContent(){
+        const lang = "ro";
+        const url = document.URL;
+        const documentName = url.substring(url.lastIndexOf('/') + 1);
+        await updateTitle(lang, documentName, translates);
+        
+        // Updates menu (for all pages)
+        const menu = document.getElementsByClassName("hb")[0];
+        parags = menu.getElementsByTagName("p");
+        for (var j = 0; j < parags.length; j++){
+            parags[j].innerHTML = translates[lang]["menu"][j];
+        }
+
+        // Updates content in index.html
+        if (documentName === "index.html") {
+            const chapters = document.getElementsByClassName("chapter");
+            for (var i = 0; i < chapters.length; i++) {
+                title = chapters[i].getElementsByTagName("h2")[0];
+                const contentName = "indexP" + String(i + 1);
+                title.innerHTML = translates[lang][contentName].title;
+                parags = chapters[i].getElementsByTagName("p");
+                for (var j = 0; j < translates[lang][contentName]["paragraphs"].length; j++){
+                    parags[j].innerHTML = translates[lang][contentName]["paragraphs"][j];
+                }
+            }
+        }
+    } 
+}
+
 // Load these functions only after the DOM Content is loaded
 window.onload = async function() {
-    
+    updateForm();
+    await fetchContent();
     let factIndex = getRandomInt(0, loadingFacts.length - 1); await updateFact(factIndex);
     await upDateTime(); setInterval(upDateTime, 1000);
     const counter = document.getElementById("count"); await updateCounter(counter);
     await loadingScreen();
 
     const button = document.getElementById("clickable");
-    button.addEventListener("click", function(){
-        dropSomething("money");
-        localStorage.count++;
-        counter.innerHTML = Number(localStorage.count);
-    });
+
+    if (sessionStorage.getItem("currentUser") != null){
+        button.addEventListener("click", function(){
+            dropSomething("money");
+            const currentSession = JSON.parse(sessionStorage.getItem("currentUser"));
+            const accounts = JSON.parse(localStorage.getItem("accounts"));
+            currentSession.count++;
+            accounts[currentSession.username].count = currentSession.count;
+            localStorage.setItem("accounts", JSON.stringify(accounts));
+            sessionStorage.setItem("currentUser", JSON.stringify(currentSession));
+            counter.innerHTML = Number(currentSession.count);
+        });
+    }
+    else {
+        counter.innerHTML = "Login!";
+    }
 
     document.addEventListener('keydown', function (event) {
 
@@ -381,7 +519,6 @@ window.onload = async function() {
 
     let logButton = document.getElementById("old");
     let regButton = document.getElementById("new");
-
     if (regButton) {
         regButton.addEventListener('click', (event) => {
             event.stopPropagation();
@@ -421,9 +558,14 @@ window.onload = async function() {
                 await register();
             } else if (login.id === "login") {
                 await loginAccount(username, email, password);
-            } else {
-                alert(login.id + " button clicked!");
             }
+        });
+    }
+    const logout = document.getElementById("logout");
+    if (logout != null) {
+        logout.addEventListener('click', async (event) => {
+            event.preventDefault();
+            await endSession();
         });
     }
 }

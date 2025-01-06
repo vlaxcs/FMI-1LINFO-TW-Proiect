@@ -6,6 +6,22 @@
 	--green:#8df49d;
 }
 
+html, body{
+    overflow-y: visible;
+}
+
+@media (max-width: 700px) {
+    #loginform span {
+        width: 150px !important;
+    }
+    #loginform input {
+        width: 150px !important;
+    }
+    input[type="radio"] {
+        height: 15px;
+    }
+}
+
 #loginform{
     top: 17vh;
     position: relative;
@@ -45,6 +61,15 @@
     border-radius: 25%;
 }
 
+.radios{
+    flex-direction: row !important;
+    background-image: none !important;
+}
+.radios span{
+    background-image: none !important;
+    font-size: 1.2vw !important;
+}
+
 #loginform label{
     margin-top: 0.5vw;
 }
@@ -57,7 +82,8 @@
 }
 
 .validate,
-.register{
+.register,
+.logout{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,12 +112,49 @@
     background-color: rgb(164, 1, 1);
 }
 
+.logoutspan{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 15vw;
+    font-family: 'StardewFont', sans-serif;
+    font-size: 1.5vw;
+    border-radius: 25%;
+}
+
+.logout{
+    height: 10vw;
+    width: 20vw;
+    background-color: rgb(211, 166, 3);
+    border: 0.4vh rgb(211, 179, 0) ridge;
+}
+
+.logout:hover{
+    cursor: url('../assets/images/selector2.png') 4 4, auto;
+    border: 0.4vh rgb(178, 152, 0) ridge;
+}
+
 .validate::selection,
-#loginform label::selection{
+#loginform label::selection,
+.logout::selection{
     background-color: transparent;
 }
 
 #loginform input::selection{
     color: magenta;
     background-color: black;
+}
+
+#loginform span input:focus{
+    outline: none;
+}
+
+input[type="radio"] {
+    transform: scale(1.2);
+}
+input[type="radio"]:hover{
+    cursor: url('../assets/images/grab.cur') 4 4, auto;
 }

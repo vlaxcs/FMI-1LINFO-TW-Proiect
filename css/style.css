@@ -522,6 +522,9 @@ main>div>iframe{
 	margin-left: 15%;
 	margin-bottom: 2vw;
 }
+.c4p{
+	font-size: 1.3vw;
+}
 
 .steam-widget {
     width: 100vw;
@@ -696,9 +699,9 @@ main>div>iframe{
 	transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
-@media only screen and (max-width: 700px) {
+@media (max-width: 1080px){
 	footer {
-		background-image: url('../assets/images/bgmedia600.png');
+		background-image: url('../assets/images/bgmedia600.png') !important;
 	}
 }
 

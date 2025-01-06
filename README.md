@@ -40,7 +40,7 @@ Paginile web asociate jocului m-au impresionat prin acuratețea maximă prin car
 - 👨‍💼 **Sistem de conturi**: Utilizatorii se pot bucura de confidențialitate sporită! Datele despre conturi (inclusiv parolele, dar sub formă criptată) sunt păstrate exclusiv în cache-ul site-ului. Odată ce se face accesul pe un cont, se poate urmări numărul de interacțiuni avute pe site, dar se poate genera și o listă de caractere preferate din joc.
 - 🌟**Surprize**: Odată cu interacțiunile de pe website, vor fi generate aleatoriu obiecte corespunzătoare tipului acesteia.
 - 🎨 **Generator de avatare**: Un mic sistem prin care poate fi creat un avatar specific dorințelor utilizatorului[^1].
-- 🏘 **Clasar al caracterelor din joc**: O mică galerie care preia conținut de pe wiki-ul oficial al Stardew Valley[^2].
+- 🏘 **Galerie a caracterelor din joc**: O mică prezentare, realizat prin funcții care preiau conținut de pe wiki-ul oficial al Stardew Valley[^2].
 - 😎 **Easter Eggs**: Descoperiți-le!
 
 ## **Cum rulează?**
@@ -49,7 +49,6 @@ Paginile web asociate jocului m-au impresionat prin acuratețea maximă prin car
 
 Pentru a rula acest website, avem nevoie de:
 - un browser
-- [VSCode](https://code.visualstudio.com/) (sau orice alt editor de text)
 - [Node.JS](https://nodejs.org/en)
 
 ### Instalare (pentru Windows)

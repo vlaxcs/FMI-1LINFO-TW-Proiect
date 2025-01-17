@@ -117,14 +117,19 @@ Calitatea conținutul a fost verificată prin:
 
 ## 2doList()
 
-a) mesaj de welcome in casuta speciala cu avatar!!!
-b) internationalizare pe toate paginile!!!
-b) choose flag!!! la primul refresh dupa ce iti faci contul, default en
+b) choose flag!!! la primul refresh dupa ce iti faci contul!!!, default en
+daca esti logat, schimba butonul de login in 'User panel'
+build.html - marquee update lang
+community.html - update lang - tot
+login.html - update lang UI + 
+backend pe erori
+o dată la 10 secunde să spargi un balon ceva
+
 
 ## **Informații administrative**
 - Acest proiect nu include conținut generat cu ajutorul inteligenței artificiale
 - De asemenea, nu au fost utilizate framework-uri / biblioteci pentru simplificarea sarcinilor
-- Timp de lucru: 70 de ore
+- Timp de lucru: 80 de ore
 - Testat pe <Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
 2, Win32, Icognito (fără extensii)>
 - Informație acumulată: pow(2, 1000) bits

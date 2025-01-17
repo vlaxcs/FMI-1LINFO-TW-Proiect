@@ -20,6 +20,60 @@
 	--green:#8df49d;
 }
 
+
+.welcome{
+    position: sticky;
+    border-top: 0.22vw var(--brown) ridge;
+	border-bottom: 0.22vw var(--brown) ridge;
+    background-color: var(--yellow);
+    font-family: 'StardewFont', sans-serif;
+    font-size: 1.5vw;
+    width: auto;
+	height: auto;
+	padding-left: 1vh;
+	padding-right: 1vh;
+	top: 7vw;
+    right: 2vw;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+	display: none;
+	visibility: collapse;
+}
+
+@keyframes slide {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	11%{
+		background-color: red;
+	}
+	22%{
+		background-color: orange;
+	}
+	33%{
+		background-color: green;
+	}
+	44%{
+		background-color: blue;
+	}
+	55%{
+		background-color: indigo;
+	}
+	66%{
+		background-color: violet;
+	}
+	100%{
+		transform: translateY(-200%);
+		opacity: 0;
+	}
+}
+
+.welcome-slide {
+	animation: slide 1s forwards;
+}
+
 body{
 	font-family: 'MyCustomFont', sans-serif;
 	overflow-x: hidden;
@@ -787,7 +841,7 @@ main>div>iframe{
 	transition: all 0.1s ease;
 }
 
-.audiopt{
+.audiopt, .audioptro, .audiologin{
 	display: none;
 }
 
@@ -796,7 +850,7 @@ main>div>iframe{
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	top: 45vh;
+	top: 50vh;
 	left: 2vw;
 	width: 10vw;
 	height: 2.5vw;

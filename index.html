@@ -25,9 +25,9 @@
 	
 		<!-- Loading screen -->
 		<span class="loading">
-			<span>Did you know...</span>
+			<span id="loadingHeader"></span>
 			<span id="loadingFact"><br></span>
-			<img src="./assets/images/arcade.png" alt="Loading screen">
+			<img src="../assets/images/arcade.png" alt="Loading screen">
 		</span>
 
 
@@ -62,6 +62,9 @@
 		</div>
 
 		<main>
+			<div id="welcome" class="welcome">
+				<p>Glad to see you!</p>
+			</div>
 			<!-- Clock -->
 			<div class="clock">
 				<div class="clockday">
@@ -122,7 +125,7 @@
 
 			<!-- Scroll button (Menu button) -->
 			<div class="scroll">
-				<a href="https://chatgpt.com/" target="_blank"><img src="assets/images/gunther.webp" alt="Gunther"></a>
+				<a href="https://gemini.google.com/" target="_blank"><img src="assets/images/gunther.webp" alt="Gunther"></a>
 			</div>
 		
 			<!-- Game description -->
@@ -302,6 +305,8 @@
 			<img src="/assets/images/greenslime.gif" alt="Slime" id="slime" class="slime">
 			
 			<audio id="audiopt" class="audiopt" src="/assets/sounds/pelicantown.mp3" controls></audio>
+			<audio id="audioptro" class="audioptro" src="/assets/sounds/sdvro.mp3" controls></audio>
+			<audio id="audiologin" class="audiologin" src="/assets/sounds/login.mp3" controls></audio>
 			
 			<span class="audioalert" id="audioalert">
 				<span id="audiostatus">Sunet activat!</span>

@@ -1,32 +1,39 @@
 // Random facts during loadingScreen()
 const loadingFacts = {
-    "en": [
-        "You can visit Desert Calico!",
-        "Extra luck doesn't last forever, watch TV!",
-        "Scarecrows are actually scaring crows!",
-        "You can unlock the Greenhouse!",
-        "The Community Center holds lots of secrets!",
-        "There are many mysteries in holes!",
-        "Garbage is surprisingly valuable!",
-        "Slimes smile in your farm!",
-        "Museum is not a work of art and Gunther is neither. At least, not yet.",
-        "You can carry up to 36 swords. Visit Pierre!",
-        "You should stay away from the blue concrete block.",
-        "Maru loves Battery Packs, Diamonds... and you ;)"],
-    "ro": [
-        "Poti vizita Desertul Calico!",
-        "Norocul extra nu dureaza la infinit, uita-te la TV!",
-        "Sperietorile chiar sperie ciorile!",
-        "Poti debloca sera! Incearca :)",
-        "Centrul Comunitatii ascunde multe secrete!",
-        "Sunt multe mistere in gauri!",
-        "Gunoiul este surprinzator de valoros!",
-        "Slime-urile zambesc in ferma ta!",
-        "Muzeul nu este o lucrare de arta si Gunther nu este nici el. Cel putin nu inca.",
-        "Poti purta pana la 36 de sabii. Viziteaza-l pe Pierre!",
-        "Ar trebui sa te feresti de blocul de beton albastru.",
-        "Maru iubeste Pachetele de Baterii, Diamantele... si pe tine ;)"
-    ]
+    "en": {
+        "header": "Did you know?",
+        "facts": [
+            "You can visit Desert Calico!",
+            "Extra luck doesn't last forever, watch TV!",
+            "Scarecrows are actually scaring crows!",
+            "You can unlock the Greenhouse!",
+            "The Community Center holds lots of secrets!",
+            "There are many mysteries in holes!",
+            "Garbage is surprisingly valuable!",
+            "Slimes smile in your farm!",
+            "Museum is not a work of art and Gunther is neither. At least, not yet.",
+            "You can carry up to 36 swords. Visit Pierre!",
+            "You should stay away from the blue concrete block.",
+            "Maru loves Battery Packs, Diamonds... and you ;)"
+        ],
+    },
+    "ro":{
+        "header": "Stiai ca?",
+        "facts": [
+            "Poti vizita Desertul Calico!",
+            "Norocul extra nu dureaza la infinit, uita-te la TV!",
+            "Sperietorile chiar sperie ciorile!",
+            "Poti debloca sera! Incearca :)",
+            "Centrul Comunitatii ascunde multe secrete!",
+            "Sunt multe mistere in gauri!",
+            "Gunoiul este surprinzator de valoros!",
+            "Slime-urile zambesc in ferma ta!",
+            "Muzeul nu este o lucrare de arta si Gunther nu este nici el. Cel putin nu inca.",
+            "Poti purta pana la 36 de sabii. Viziteaza-l pe Pierre!",
+            "Ar trebui sa te feresti de blocul de beton albastru.",
+            "Maru iubeste Pachetele de Baterii, Diamantele... si pe tine ;)"
+        ]
+    }
 };
 
 // ===== Utility Functions =====
@@ -37,15 +44,20 @@ function getRandomInt(min, max){
 
 // Updates the fact in loading screen
 async function updateFact(factIndex) {
-    const lang = "ro";
+    let lang = sessionStorage.getItem("language");
+    if (lang == null){
+        lang = "en";
+    }
     const fact = document.getElementById("loadingFact");
+    const header = document.getElementById("loadingHeader");
 
-    newIndex = getRandomInt(0, loadingFacts[lang].length - 1);
+    newIndex = getRandomInt(0, loadingFacts[lang].facts.length - 1);
     while (factIndex == newIndex){
-        newIndex = getRandomInt(0, loadingFacts[lang].length - 1);
+        newIndex = getRandomInt(0, loadingFacts[lang].facts.length - 1);
     }
     factIndex = newIndex;
-    fact.innerHTML = loadingFacts[lang][newIndex];
+    header.innerHTML = loadingFacts[lang].header;
+    fact.innerHTML = loadingFacts[lang].facts[newIndex];
 
     await new Promise(resolve => setTimeout(resolve, 2000));
 }
@@ -110,12 +122,27 @@ function toggleMenuState() {
 
 // Toggle audio play/pause
 function toggleAudio(){
-    const audio = document.getElementById("audiopt");
+    let lang = sessionStorage.getItem("language");
+    let audio;
+    if (lang == null || lang == "en"){
+        audio = document.getElementById("audiopt");
+    }
+    else if (lang == "ro") {
+        audio = document.getElementById("audioptro");
+    }
     const audioAlert = document.getElementById("audioalert");
     const style = window.getComputedStyle(audioAlert);
+    audioStatus = document.getElementById("audiostatus");
     if (String(style.display) == "none")
     {
         audio.play();
+        if (sessionStorage.getItem("language") == "ro"){
+            audioStatus.innerHTML = "Sunet activat!";
+        }
+        else{
+
+            audioStatus.innerHTML = "Sound active!";
+        }
         audioAlert.style.display = "flex";
     }
     else if (String(style.display) == "flex")
@@ -226,11 +253,17 @@ function updateSlime(currentElement){
 
 // ===== User Account Management =====
 // Tries to register an account into localStorage
-async function register() {
+async function register(username, email, password, language) {
 
-    let username = document.getElementById("username").value.trim().toLowerCase();
-    const password = document.getElementById("password").value.trim();
-    let email = document.getElementById("email").value.trim().toLowerCase();
+    username = username.value.trim().toLowerCase();
+    password = password.value.trim();
+    email = email.value.trim().toLowerCase();
+    if (language.checked){
+        language.value = "ro";
+    }
+    else{
+        language.value = "en";
+    }
 
     const hashedPassword = await hashPassword(password);
     console.log("Hashed Password:", hashedPassword);
@@ -267,7 +300,7 @@ async function register() {
         return;
     }
 
-    await addAccount(username, email, hashedPassword);
+    await addAccount(username, email, hashedPassword, language.value);
     alert("Your account is now registered. You can sign in!");
 
     setTimeout(function() {
@@ -276,7 +309,7 @@ async function register() {
 }
 
 // Tries to login into an account, without starting the AJAX session
-async function loginAccount(username, email, password){
+async function loginAccount(username, email, password, language){
     let accounts = JSON.parse(localStorage.getItem('accounts'));
     username = username.value;
     email = email.value;
@@ -307,7 +340,9 @@ async function loginAccount(username, email, password){
     if (accounts[username] && accounts[username].email == email && accounts[username].password == hashedPassword)
     {
         count = accounts[username].count;
+        language = accounts[username].language;
         sessionStorage.setItem("currentUser", JSON.stringify({username, email, count}));
+        sessionStorage.setItem("language", language);
         alert("Welcome, " + username + "!");
 
         setTimeout(function() {
@@ -330,9 +365,9 @@ async function hashPassword(password)
 }
 
 // Function to set a new account into localStorage
-async function addAccount(username, email, password) {
+async function addAccount(username, email, password, language) {
     let accounts = JSON.parse(localStorage.getItem('accounts'));
-    accounts[username] = { email: email, password: password, count: null };
+    accounts[username] = { email: email, password: password, count: null, language: language};
     localStorage.setItem('accounts', JSON.stringify(accounts));
 }
 
@@ -378,7 +413,7 @@ async function endSession(){
     return;
 }
 
-function updateForm(){
+function updateLoggedUser(){
     const currentSession = JSON.parse(sessionStorage.getItem("currentUser"));
     if (currentSession != null){
         form = document.getElementById("loginform");
@@ -407,7 +442,7 @@ function updateForm(){
 }
 
 async function updateTitle(lang, documentName, translates){
-    if (documentName === "index.html"){
+    if (documentName === "index.html" || documentName == ""){
         const title = document.getElementsByTagName("title")[0];
         title.innerHTML = translates[lang]["pageTitle"][0];
     }
@@ -437,7 +472,11 @@ async function fetchContent(){
     });
 
     async function updateContent(){
-        const lang = "ro";
+        let lang = sessionStorage.getItem("language");
+        if (lang == null){
+            lang = "en";
+        }
+ 
         const url = document.URL;
         const documentName = url.substring(url.lastIndexOf('/') + 1);
         await updateTitle(lang, documentName, translates);
@@ -448,9 +487,9 @@ async function fetchContent(){
         for (var j = 0; j < parags.length; j++){
             parags[j].innerHTML = translates[lang]["menu"][j];
         }
-
+        
         // Updates content in index.html
-        if (documentName === "index.html") {
+        if (documentName === "index.html" || documentName == "") {
             const chapters = document.getElementsByClassName("chapter");
             for (var i = 0; i < chapters.length; i++) {
                 title = chapters[i].getElementsByTagName("h2")[0];
@@ -465,14 +504,56 @@ async function fetchContent(){
     } 
 }
 
+function updateLoggedMessage(){
+    const currentSession = JSON.parse(sessionStorage.getItem("currentUser"));
+    if (currentSession != null && sessionStorage.getItem("welcomeMessage") == null){
+        welcomeMessage = document.getElementById("welcome");
+        if (welcomeMessage){
+            welcomeText = welcomeMessage.getElementsByTagName("p")[0];
+            if (sessionStorage.getItem("language") == "ro"){
+                welcomeText.innerHTML = "Bine ai revenit, " + currentSession.username + "!";
+            }
+            else{
+                welcomeText.innerHTML = "Glad to see you, " + currentSession.username + "!";
+            }
+            avatar = document.createElement("img");
+            avatar.src = "../assets/images/Sam.png";
+            avatar.style.width = "50px";
+            avatar.style.height = "50px";
+            avatar.style.borderRadius = "50%";
+            avatar.style.padding = "10px";
+            welcomeMessage.appendChild(avatar);
+            welcomeMessage.style.display = "Flex";
+            welcomeMessage.style.visibility = "Visible";
+            const audio = document.getElementById("audiologin");
+            audio.src = "/assets/sounds/login" + getRandomInt(1, 1) + ".mp3";
+            audio.play();
+            setTimeout(() => {
+                welcomeMessage.classList.add("welcome-slide");
+                setTimeout(() => {
+                    welcomeMessage.remove();
+                    sessionStorage.setItem("welcomeMessage", "false");
+                }, 1000);
+            }, 9000)   
+        }
+    }
+    else {
+        welcomeMessage = document.getElementById("welcome");
+        if (welcomeMessage){
+            welcomeMessage.remove();
+        }
+    }
+}
+
 // Load these functions only after the DOM Content is loaded
 window.onload = async function() {
-    updateForm();
+    updateLoggedUser();
     await fetchContent();
     let factIndex = getRandomInt(0, loadingFacts.length - 1); await updateFact(factIndex);
     await upDateTime(); setInterval(upDateTime, 1000);
     const counter = document.getElementById("count"); await updateCounter(counter);
     await loadingScreen();
+    updateLoggedMessage();
 
     const button = document.getElementById("clickable");
 
@@ -555,9 +636,9 @@ window.onload = async function() {
             }
 
             if (login.id === "register") {
-                await register();
+                await register(username, email, password, language);
             } else if (login.id === "login") {
-                await loginAccount(username, email, password);
+                await loginAccount(username, email, password, language);
             }
         });
     }

@@ -56,7 +56,7 @@
 
 		<!-- Loading screen -->
 		<span class="loading">
-			<span>Did you know...</span>
+			<span id="loadingHeader"></span>
 			<span id="loadingFact"><br></span>
 			<img src="../assets/images/arcade.png" alt="Loading screen">
 		</span>
@@ -82,9 +82,11 @@
             <img src="/assets/images/greenslime.gif" alt="Slime" id="slime" class="slime">
 			
 			<audio id="audiopt" class="audiopt" src="/assets/sounds/pelicantown.mp3" controls></audio>
+			<audio id="audioptro" class="audioptro" src="/assets/sounds/sdvro.mp3" controls></audio>
+			<audio id="audiologin" class="audiologin" src="/assets/sounds/login.mp3" controls></audio>
 			
 			<span class="audioalert" id="audioalert">
-				<span id="audiostatus">Sunet activat!</span>
+				<span id="audiostatus"></span>
 			</span>
 		
 			<!-- Login -->
@@ -113,7 +115,12 @@
 					</span>
 
 					<span>
-					<button id="login" class="validate">LOGIN</button>
+					<label for="language">Romanian?</label>
+						<img src="../assets/images/romania.gif"><input type="checkbox" id="language" name="ro" required>
+					</span>
+
+					<span>
+						<button id="login" class="validate">LOGIN</button>
 					</span>
 				</form>
 

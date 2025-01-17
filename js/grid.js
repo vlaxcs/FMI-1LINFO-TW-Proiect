@@ -101,8 +101,8 @@ async function main() {
     await AjaxBachelorettes();
     await AjaxNMCandidates();
     await eventButton();
-
     populate(0);
+    
 }
 
 document.addEventListener('DOMContentLoaded', async () => {

@@ -115,16 +115,6 @@ Calitatea conținutul a fost verificată prin:
 - [HTML Validator](https://validator.w3.org/)
 - [CSS Validator](https://jigsaw.w3.org/css-validator/)
 
-## 2doList()
-
-b) choose flag!!! la primul refresh dupa ce iti faci contul!!!, default en
-daca esti logat, schimba butonul de login in 'User panel'
-build.html - marquee update lang
-community.html - update lang - tot
-login.html - update lang UI + 
-backend pe erori
-o dată la 10 secunde să spargi un balon ceva
-
 
 ## **Informații administrative**
 - Acest proiect nu include conținut generat cu ajutorul inteligenței artificiale

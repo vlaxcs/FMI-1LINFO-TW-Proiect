@@ -62,7 +62,7 @@ Pentru a rula acest website, avem nevoie de:
   node -v
   npm -v
 ```
-2. Clonați repozitoriul
+2. Clonați repositoriul
 ```bash
    git clone https://github.com/vlaxcs/FMI-1LINFO-TW-Proiect.git
    cd FMI-1LINFO-TW-Proiect

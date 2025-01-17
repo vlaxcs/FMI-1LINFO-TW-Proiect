@@ -534,7 +534,7 @@ function updateLoggedMessage(){
                     welcomeMessage.remove();
                     sessionStorage.setItem("welcomeMessage", "false");
                 }, 1000);
-            }, 9000)   
+            }, 4000)   
         }
     }
     else {

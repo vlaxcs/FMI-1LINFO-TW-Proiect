@@ -73,7 +73,7 @@ Pentru a rula acest website, avem nevoie de:
 ```bash
    node server.js
 ```
-5. Din browser, accesați [localhost:3000](http://localhost:3000/). Nu sunt suportate extensiile, deci vă recomand să folosiți modul icognito.
+5. Din browser, accesați [localhost:3000](http://localhost:3000/). Nu sunt suportate extensiile, deci vă recomand să folosiți modul incognito.
 
 ## **Utilizare**
 
@@ -121,7 +121,7 @@ Calitatea conținutul a fost verificată prin:
 - De asemenea, nu au fost utilizate framework-uri / biblioteci pentru simplificarea sarcinilor
 - Timp de lucru: 80 de ore
 - Testat pe <Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-2, Win32, Icognito (fără extensii)>
+2, Win32, incognito (fără extensii)>
 - Informație acumulată: pow(2, 1000) bits
 - Doamna profesoară încântată: Să sperăm ❤
 
